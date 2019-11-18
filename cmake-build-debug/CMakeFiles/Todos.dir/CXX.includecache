@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/dawsonheide/CLionProjects/Todos/Database.h
+iostream
+-
+string
+-
+sqlite3.h
+-
+
+/Users/dawsonheide/CLionProjects/Todos/Task.h
+string
+-
+
+/Users/dawsonheide/CLionProjects/Todos/UrgentTask.h
+string
+-
+Task.h
+/Users/dawsonheide/CLionProjects/Todos/Task.h
+
+/Users/dawsonheide/CLionProjects/Todos/User.h
+string
+-
+vector
+-
+Task.h
+/Users/dawsonheide/CLionProjects/Todos/Task.h
+
+/Users/dawsonheide/CLionProjects/Todos/main.cpp
+iostream
+-
+User.h
+/Users/dawsonheide/CLionProjects/Todos/User.h
+Task.h
+/Users/dawsonheide/CLionProjects/Todos/Task.h
+UrgentTask.h
+/Users/dawsonheide/CLionProjects/Todos/UrgentTask.h
+Database.h
+/Users/dawsonheide/CLionProjects/Todos/Database.h
+
