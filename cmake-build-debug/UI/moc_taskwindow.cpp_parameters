@@ -1,0 +1,5 @@
+-I/Users/alexonghena/Documents/workspace/c++/3112-Project
+-I/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug
+-o
+/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/UI/moc_taskwindow.cpp
+/Users/alexonghena/Documents/workspace/c++/3112-Project/UI/taskwindow.h

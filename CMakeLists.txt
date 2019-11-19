@@ -1,8 +1,26 @@
-cmake_minimum_required(VERSION 3.15)
-project(Todos)
+cmake_minimum_required(VERSION 3.5)
 
-set(CMAKE_CXX_STANDARD 14)
+project(Todos LANGUAGES CXX)
 
-add_executable(Todos main.cpp User.h Task.h UrgentTask.h Database.h)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-target_link_libraries(Todos sqlite3)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+find_package(Qt5 COMPONENTS Widgets REQUIRED)
+
+add_executable(Todos
+        main.cpp
+        ui/mainwindow.cpp
+        ui/mainwindow.h
+        ui/mainwindow.ui
+        ui/taskwindow.h
+        ui/taskwindow.cpp
+        ui/taskwindow.ui
+        )
+
+target_link_libraries(Todos PRIVATE Qt5::Widgets sqlite3)

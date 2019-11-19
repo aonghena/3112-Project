@@ -1,5 +1,11 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Todos_autogen.dir/AutogenOldSettings.txt"
+  "CMakeFiles/Todos_autogen.dir/ParseCache.txt"
+  "Todos_autogen"
+  "CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/Todos.dir/main.cpp.o"
+  "CMakeFiles/Todos.dir/ui/mainwindow.cpp.o"
+  "CMakeFiles/Todos.dir/ui/taskwindow.cpp.o"
   "Todos"
   "Todos.pdb"
 )

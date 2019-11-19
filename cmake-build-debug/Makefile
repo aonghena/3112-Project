@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/dawsonheide/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = "/Users/dawsonheide/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/dawsonheide/CLionProjects/Todos
+CMAKE_SOURCE_DIR = /Users/alexonghena/Documents/workspace/c++/3112-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/dawsonheide/CLionProjects/Todos/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/dawsonheide/CLionProjects/Todos/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"/Users/dawsonheide/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"/Users/dawsonheide/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dawsonheide/CLionProjects/Todos/cmake-build-debug/CMakeFiles /Users/dawsonheide/CLionProjects/Todos/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/dawsonheide/CLionProjects/Todos/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,46 @@ Todos/fast:
 	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/build
 .PHONY : Todos/fast
 
+#=============================================================================
+# Target rules for targets named Todos_autogen
+
+# Build rule for target.
+Todos_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Todos_autogen
+.PHONY : Todos_autogen
+
+# fast build rule for target.
+Todos_autogen/fast:
+	$(MAKE) -f CMakeFiles/Todos_autogen.dir/build.make CMakeFiles/Todos_autogen.dir/build
+.PHONY : Todos_autogen/fast
+
+Todos_autogen/mocs_compilation.o: Todos_autogen/mocs_compilation.cpp.o
+
+.PHONY : Todos_autogen/mocs_compilation.o
+
+# target to build an object file
+Todos_autogen/mocs_compilation.cpp.o:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o
+.PHONY : Todos_autogen/mocs_compilation.cpp.o
+
+Todos_autogen/mocs_compilation.i: Todos_autogen/mocs_compilation.cpp.i
+
+.PHONY : Todos_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+Todos_autogen/mocs_compilation.cpp.i:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.i
+.PHONY : Todos_autogen/mocs_compilation.cpp.i
+
+Todos_autogen/mocs_compilation.s: Todos_autogen/mocs_compilation.cpp.s
+
+.PHONY : Todos_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+Todos_autogen/mocs_compilation.cpp.s:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.s
+.PHONY : Todos_autogen/mocs_compilation.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -150,6 +190,60 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+ui/mainwindow.o: ui/mainwindow.cpp.o
+
+.PHONY : ui/mainwindow.o
+
+# target to build an object file
+ui/mainwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/ui/mainwindow.cpp.o
+.PHONY : ui/mainwindow.cpp.o
+
+ui/mainwindow.i: ui/mainwindow.cpp.i
+
+.PHONY : ui/mainwindow.i
+
+# target to preprocess a source file
+ui/mainwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/ui/mainwindow.cpp.i
+.PHONY : ui/mainwindow.cpp.i
+
+ui/mainwindow.s: ui/mainwindow.cpp.s
+
+.PHONY : ui/mainwindow.s
+
+# target to generate assembly for a file
+ui/mainwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/ui/mainwindow.cpp.s
+.PHONY : ui/mainwindow.cpp.s
+
+ui/taskwindow.o: ui/taskwindow.cpp.o
+
+.PHONY : ui/taskwindow.o
+
+# target to build an object file
+ui/taskwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/ui/taskwindow.cpp.o
+.PHONY : ui/taskwindow.cpp.o
+
+ui/taskwindow.i: ui/taskwindow.cpp.i
+
+.PHONY : ui/taskwindow.i
+
+# target to preprocess a source file
+ui/taskwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/ui/taskwindow.cpp.i
+.PHONY : ui/taskwindow.cpp.i
+
+ui/taskwindow.s: ui/taskwindow.cpp.s
+
+.PHONY : ui/taskwindow.s
+
+# target to generate assembly for a file
+ui/taskwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/ui/taskwindow.cpp.s
+.PHONY : ui/taskwindow.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +253,19 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Todos"
+	@echo "... Todos_autogen"
+	@echo "... Todos_autogen/mocs_compilation.o"
+	@echo "... Todos_autogen/mocs_compilation.i"
+	@echo "... Todos_autogen/mocs_compilation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... ui/mainwindow.o"
+	@echo "... ui/mainwindow.i"
+	@echo "... ui/mainwindow.s"
+	@echo "... ui/taskwindow.o"
+	@echo "... ui/taskwindow.i"
+	@echo "... ui/taskwindow.s"
 .PHONY : help
 
 

@@ -1,4 +1,4 @@
-"/Users/dawsonheide/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=/Users/dawsonheide/Qt/5.12.6/clang_64/lib/cmake -G "CodeBlocks - Unix Makefiles" /Users/dawsonheide/CLionProjects/Todos
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=/Users/alexonghena/Qt/5.12.6/clang_64/lib/cmake -G "CodeBlocks - Unix Makefiles" /Users/alexonghena/Documents/workspace/c++/3112-Project
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/dawsonheide/CLionProjects/Todos/cmake-build-debug
+-- Build files have been written to: /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug
