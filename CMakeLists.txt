@@ -21,6 +21,8 @@ add_executable(Todos
         ui/taskwindow.h
         ui/taskwindow.cpp
         ui/taskwindow.ui
-        )
+        UI/loginwindow.cpp
+        UI/loginwindow.h
+        UI/loginwindow.ui)
 
 target_link_libraries(Todos PRIVATE Qt5::Widgets sqlite3)

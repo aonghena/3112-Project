@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/Todos_autogen/mocs_compilation.cpp" "/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o"
+  "/Users/alexonghena/Documents/workspace/c++/3112-Project/UI/loginwindow.cpp" "/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles/Todos.dir/UI/loginwindow.cpp.o"
   "/Users/alexonghena/Documents/workspace/c++/3112-Project/main.cpp" "/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles/Todos.dir/main.cpp.o"
   "/Users/alexonghena/Documents/workspace/c++/3112-Project/ui/mainwindow.cpp" "/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles/Todos.dir/ui/mainwindow.cpp.o"
   "/Users/alexonghena/Documents/workspace/c++/3112-Project/ui/taskwindow.cpp" "/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles/Todos.dir/ui/taskwindow.cpp.o"

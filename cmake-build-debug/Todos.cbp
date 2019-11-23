@@ -118,6 +118,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/alexonghena/Documents/workspace/c++/3112-Project/UI/loginwindow.cpp">
+			<Option target="Todos"/>
+		</Unit>
+		<Unit filename="/Users/alexonghena/Documents/workspace/c++/3112-Project/UI/loginwindow.h">
+			<Option target="Todos"/>
+		</Unit>
+		<Unit filename="/Users/alexonghena/Documents/workspace/c++/3112-Project/UI/loginwindow.ui">
+			<Option target="Todos"/>
+		</Unit>
 		<Unit filename="/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/Todos_autogen/mocs_compilation.cpp">
 			<Option target="Todos"/>
 		</Unit>

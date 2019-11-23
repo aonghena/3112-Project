@@ -163,6 +163,33 @@ Todos_autogen/mocs_compilation.cpp.s:
 	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.s
 .PHONY : Todos_autogen/mocs_compilation.cpp.s
 
+UI/loginwindow.o: UI/loginwindow.cpp.o
+
+.PHONY : UI/loginwindow.o
+
+# target to build an object file
+UI/loginwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/UI/loginwindow.cpp.o
+.PHONY : UI/loginwindow.cpp.o
+
+UI/loginwindow.i: UI/loginwindow.cpp.i
+
+.PHONY : UI/loginwindow.i
+
+# target to preprocess a source file
+UI/loginwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/UI/loginwindow.cpp.i
+.PHONY : UI/loginwindow.cpp.i
+
+UI/loginwindow.s: UI/loginwindow.cpp.s
+
+.PHONY : UI/loginwindow.s
+
+# target to generate assembly for a file
+UI/loginwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/UI/loginwindow.cpp.s
+.PHONY : UI/loginwindow.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -257,6 +284,9 @@ help:
 	@echo "... Todos_autogen/mocs_compilation.o"
 	@echo "... Todos_autogen/mocs_compilation.i"
 	@echo "... Todos_autogen/mocs_compilation.s"
+	@echo "... UI/loginwindow.o"
+	@echo "... UI/loginwindow.i"
+	@echo "... UI/loginwindow.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

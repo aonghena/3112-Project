@@ -15,6 +15,7 @@ protected:
 
     static int currentId;
     int id;
+    bool isDone;
     string title;
     string description;
     int user_id;
@@ -27,6 +28,7 @@ public:
         this->description = description;
         this->user_id = userId;
         this->id=currentId;
+        this->isDone = false;
         currentId++;
     }
 
@@ -36,6 +38,14 @@ public:
 
     const string &getTitle() const {
         return title;
+    }
+
+    const bool getIsDone() const{
+        return isDone;
+    }
+
+    void setIsDone(bool isDone){
+        Task:isDone = isDone;
     }
 
     void setTitle(const string &title) {
