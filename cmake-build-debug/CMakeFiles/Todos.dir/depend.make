@@ -3,9 +3,11 @@
 
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: ../UI/loginwindow.h
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: ../UI/mainwindow.h
+CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: ../UI/registerwindow.h
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: ../UI/taskwindow.h
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: Todos_autogen/KRKR4BN5RM/moc_loginwindow.cpp
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: Todos_autogen/KRKR4BN5RM/moc_mainwindow.cpp
+CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: Todos_autogen/KRKR4BN5RM/moc_registerwindow.cpp
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: Todos_autogen/KRKR4BN5RM/moc_taskwindow.cpp
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: Todos_autogen/mocs_compilation.cpp
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QDebug
@@ -20,15 +22,34 @@ CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: /Users/alexonghena/Qt
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: ../UI/loginwindow.cpp
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: ../UI/loginwindow.h
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: ../UI/mainwindow.h
+CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: ../UI/registerwindow.h
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QDebug
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qdebug.h
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtCore.framework/QtCore
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtGui.framework/QtGui
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QInputDialog
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMainWindow
+CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMessageBox
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qinputdialog.h
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h
+CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: Todos_autogen/include/ui_loginwindow.h
+
+CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: ../UI/loginwindow.h
+CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: ../UI/mainwindow.h
+CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: ../UI/registerwindow.cpp
+CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: ../UI/registerwindow.h
+CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QDebug
+CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qdebug.h
+CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtCore.framework/QtCore
+CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtGui.framework/QtGui
+CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QInputDialog
+CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMainWindow
+CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMessageBox
+CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qinputdialog.h
+CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h
+CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h
+CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: Todos_autogen/include/ui_registerwindow.h
 
 CMakeFiles/Todos.dir/main.cpp.o: ../Database.h
 CMakeFiles/Todos.dir/main.cpp.o: ../Task.h

@@ -190,6 +190,33 @@ UI/loginwindow.cpp.s:
 	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/UI/loginwindow.cpp.s
 .PHONY : UI/loginwindow.cpp.s
 
+UI/registerwindow.o: UI/registerwindow.cpp.o
+
+.PHONY : UI/registerwindow.o
+
+# target to build an object file
+UI/registerwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/UI/registerwindow.cpp.o
+.PHONY : UI/registerwindow.cpp.o
+
+UI/registerwindow.i: UI/registerwindow.cpp.i
+
+.PHONY : UI/registerwindow.i
+
+# target to preprocess a source file
+UI/registerwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/UI/registerwindow.cpp.i
+.PHONY : UI/registerwindow.cpp.i
+
+UI/registerwindow.s: UI/registerwindow.cpp.s
+
+.PHONY : UI/registerwindow.s
+
+# target to generate assembly for a file
+UI/registerwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/UI/registerwindow.cpp.s
+.PHONY : UI/registerwindow.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -287,6 +314,9 @@ help:
 	@echo "... UI/loginwindow.o"
 	@echo "... UI/loginwindow.i"
 	@echo "... UI/loginwindow.s"
+	@echo "... UI/registerwindow.o"
+	@echo "... UI/registerwindow.i"
+	@echo "... UI/registerwindow.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>LoginWindow</class>
- <widget class="QWidget" name="LoginWindow">
+ <class>RegisterWindow</class>
+ <widget class="QWidget" name="RegisterWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>227</width>
-    <height>174</height>
+    <width>263</width>
+    <height>249</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -34,7 +34,7 @@
        <item>
         <widget class="QLabel" name="label">
          <property name="text">
-          <string>TODO Login</string>
+          <string>Register an Account TODO</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -61,12 +61,12 @@
        <item>
         <widget class="QLabel" name="label_2">
          <property name="text">
-          <string>Email:        </string>
+          <string>Email       </string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="emailInput"/>
+        <widget class="QLineEdit" name="usernameInput"/>
        </item>
       </layout>
      </item>
@@ -75,7 +75,21 @@
        <item>
         <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>Password: </string>
+          <string>Name      </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="nameInput"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Password</string>
          </property>
         </widget>
        </item>
@@ -84,19 +98,37 @@
        </item>
       </layout>
      </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Already have an account?</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>Login</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
     </layout>
    </item>
    <item>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QLabel" name="Register">
      <property name="text">
-      <string>Register Here</string>
+      <string/>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QPushButton" name="pushButton">
      <property name="text">
-      <string>Login</string>
+      <string>Register</string>
      </property>
     </widget>
    </item>

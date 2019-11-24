@@ -1,16 +1,16 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'loginwindow.h'
+** Meta object code from reading C++ file 'registerwindow.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.12.6)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../UI/loginwindow.h"
+#include "../../../UI/registerwindow.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'loginwindow.h' doesn't include <QObject>."
+#error "The header file 'registerwindow.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.12.6. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -20,29 +20,29 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_LoginWindow_t {
+struct qt_meta_stringdata_RegisterWindow_t {
     QByteArrayData data[4];
-    char stringdata0[48];
+    char stringdata0[52];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_LoginWindow_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_RegisterWindow_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_LoginWindow_t qt_meta_stringdata_LoginWindow = {
+static const qt_meta_stringdata_RegisterWindow_t qt_meta_stringdata_RegisterWindow = {
     {
-QT_MOC_LITERAL(0, 0, 11), // "LoginWindow"
-QT_MOC_LITERAL(1, 12, 17), // "onSignButtonClick"
-QT_MOC_LITERAL(2, 30, 0), // ""
-QT_MOC_LITERAL(3, 31, 16) // "onRegButtonClick"
+QT_MOC_LITERAL(0, 0, 14), // "RegisterWindow"
+QT_MOC_LITERAL(1, 15, 18), // "onLoginButtonClick"
+QT_MOC_LITERAL(2, 34, 0), // ""
+QT_MOC_LITERAL(3, 35, 16) // "onRegButtonClick"
 
     },
-    "LoginWindow\0onSignButtonClick\0\0"
+    "RegisterWindow\0onLoginButtonClick\0\0"
     "onRegButtonClick"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_LoginWindow[] = {
+static const uint qt_meta_data_RegisterWindow[] = {
 
  // content:
        8,       // revision
@@ -66,13 +66,13 @@ static const uint qt_meta_data_LoginWindow[] = {
        0        // eod
 };
 
-void LoginWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void RegisterWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<LoginWindow *>(_o);
+        auto *_t = static_cast<RegisterWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->onSignButtonClick(); break;
+        case 0: _t->onLoginButtonClick(); break;
         case 1: _t->onRegButtonClick(); break;
         default: ;
         }
@@ -80,30 +80,30 @@ void LoginWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject LoginWindow::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject RegisterWindow::staticMetaObject = { {
     &QWidget::staticMetaObject,
-    qt_meta_stringdata_LoginWindow.data,
-    qt_meta_data_LoginWindow,
+    qt_meta_stringdata_RegisterWindow.data,
+    qt_meta_data_RegisterWindow,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *LoginWindow::metaObject() const
+const QMetaObject *RegisterWindow::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *LoginWindow::qt_metacast(const char *_clname)
+void *RegisterWindow::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_LoginWindow.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_RegisterWindow.stringdata0))
         return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
-int LoginWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int RegisterWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)

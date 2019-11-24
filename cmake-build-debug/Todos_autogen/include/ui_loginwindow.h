@@ -32,11 +32,11 @@ public:
     QSpacerItem *horizontalSpacer_2;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_2;
-    QLineEdit *lineEdit;
+    QLineEdit *emailInput;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_3;
-    QLineEdit *lineEdit_2;
-    QLabel *label_4;
+    QLineEdit *passwordInput;
+    QPushButton *pushButton_2;
     QPushButton *pushButton;
 
     void setupUi(QWidget *LoginWindow)
@@ -79,10 +79,10 @@ public:
 
         horizontalLayout_3->addWidget(label_2);
 
-        lineEdit = new QLineEdit(LoginWindow);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        emailInput = new QLineEdit(LoginWindow);
+        emailInput->setObjectName(QString::fromUtf8("emailInput"));
 
-        horizontalLayout_3->addWidget(lineEdit);
+        horizontalLayout_3->addWidget(emailInput);
 
 
         verticalLayout_2->addLayout(horizontalLayout_3);
@@ -95,10 +95,10 @@ public:
 
         horizontalLayout_2->addWidget(label_3);
 
-        lineEdit_2 = new QLineEdit(LoginWindow);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        passwordInput = new QLineEdit(LoginWindow);
+        passwordInput->setObjectName(QString::fromUtf8("passwordInput"));
 
-        horizontalLayout_2->addWidget(lineEdit_2);
+        horizontalLayout_2->addWidget(passwordInput);
 
 
         verticalLayout_2->addLayout(horizontalLayout_2);
@@ -106,10 +106,10 @@ public:
 
         verticalLayout->addLayout(verticalLayout_2);
 
-        label_4 = new QLabel(LoginWindow);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
+        pushButton_2 = new QPushButton(LoginWindow);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
 
-        verticalLayout->addWidget(label_4);
+        verticalLayout->addWidget(pushButton_2);
 
         pushButton = new QPushButton(LoginWindow);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
@@ -126,9 +126,9 @@ public:
     {
         LoginWindow->setWindowTitle(QApplication::translate("LoginWindow", "Todo", nullptr));
         label->setText(QApplication::translate("LoginWindow", "TODO Login", nullptr));
-        label_2->setText(QApplication::translate("LoginWindow", "Username:", nullptr));
+        label_2->setText(QApplication::translate("LoginWindow", "Email:        ", nullptr));
         label_3->setText(QApplication::translate("LoginWindow", "Password: ", nullptr));
-        label_4->setText(QApplication::translate("LoginWindow", "Click Here to Create an Account.", nullptr));
+        pushButton_2->setText(QApplication::translate("LoginWindow", "Register Here", nullptr));
         pushButton->setText(QApplication::translate("LoginWindow", "Login", nullptr));
     } // retranslateUi
 

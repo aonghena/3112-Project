@@ -25,7 +25,8 @@ public:
     ~LoginWindow();
 
 public slots:
-    void onButtonClick();
+    void onSignButtonClick();
+    void onRegButtonClick();
 
 private:
     Ui::LoginWindow *ui;
