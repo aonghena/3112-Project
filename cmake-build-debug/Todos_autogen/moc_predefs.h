@@ -340,7 +340,7 @@
 #define __UINT_LEAST8_MAX__ 255
 #define __UINT_LEAST8_TYPE__ unsigned char
 #define __USER_LABEL_PREFIX__ _
-#define __VERSION__ "4.2.1 Compatible Apple LLVM 11.0.0 (clang-1100.0.33.12)"
+#define __VERSION__ "4.2.1 Compatible Apple LLVM 11.0.0 (clang-1100.0.33.8)"
 #define __WCHAR_MAX__ 2147483647
 #define __WCHAR_TYPE__ int
 #define __WCHAR_WIDTH__ 32
@@ -355,7 +355,7 @@
 #define __clang_major__ 11
 #define __clang_minor__ 0
 #define __clang_patchlevel__ 0
-#define __clang_version__ "11.0.0 (clang-1100.0.33.12)"
+#define __clang_version__ "11.0.0 (clang-1100.0.33.8)"
 #define __code_model_small_ 1
 #define __core2 1
 #define __core2__ 1

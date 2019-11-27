@@ -6,19 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/Users/alexonghena/Documents/workspace/c++/3112-Project/Database.h
+/Users/dawsonheide/CLionProjects/3112-Project/Database.h
 iostream
 -
 string
 -
 sqlite3.h
 -
+vector
+-
 
-/Users/alexonghena/Documents/workspace/c++/3112-Project/Task.h
+/Users/dawsonheide/CLionProjects/3112-Project/Task.h
 string
 -
+Database.h
+/Users/dawsonheide/CLionProjects/3112-Project/Database.h
 
-/Users/alexonghena/Documents/workspace/c++/3112-Project/UI/mainwindow.h
+/Users/dawsonheide/CLionProjects/3112-Project/UI/mainwindow.h
 QMainWindow
 -
 QDebug
@@ -30,7 +34,7 @@ QtCore
 QInputDialog
 -
 
-/Users/alexonghena/Documents/workspace/c++/3112-Project/UI/taskwindow.h
+/Users/dawsonheide/CLionProjects/3112-Project/UI/taskwindow.h
 QMainWindow
 -
 QDebug
@@ -42,31 +46,33 @@ QtCore
 QInputDialog
 -
 
-/Users/alexonghena/Documents/workspace/c++/3112-Project/UrgentTask.h
+/Users/dawsonheide/CLionProjects/3112-Project/UrgentTask.h
 string
 -
 Task.h
-/Users/alexonghena/Documents/workspace/c++/3112-Project/Task.h
+/Users/dawsonheide/CLionProjects/3112-Project/Task.h
 
-/Users/alexonghena/Documents/workspace/c++/3112-Project/User.h
+/Users/dawsonheide/CLionProjects/3112-Project/User.h
 string
 -
 vector
 -
 Task.h
-/Users/alexonghena/Documents/workspace/c++/3112-Project/Task.h
+/Users/dawsonheide/CLionProjects/3112-Project/Task.h
+Database.h
+/Users/dawsonheide/CLionProjects/3112-Project/Database.h
 
-/Users/alexonghena/Documents/workspace/c++/3112-Project/main.cpp
+/Users/dawsonheide/CLionProjects/3112-Project/main.cpp
 iostream
 -
 User.h
-/Users/alexonghena/Documents/workspace/c++/3112-Project/User.h
+/Users/dawsonheide/CLionProjects/3112-Project/User.h
 Task.h
-/Users/alexonghena/Documents/workspace/c++/3112-Project/Task.h
+/Users/dawsonheide/CLionProjects/3112-Project/Task.h
 UrgentTask.h
-/Users/alexonghena/Documents/workspace/c++/3112-Project/UrgentTask.h
+/Users/dawsonheide/CLionProjects/3112-Project/UrgentTask.h
 Database.h
-/Users/alexonghena/Documents/workspace/c++/3112-Project/Database.h
+/Users/dawsonheide/CLionProjects/3112-Project/Database.h
 QApplication
 -
 QDebug
@@ -76,15 +82,15 @@ QApplication
 QPushButton
 -
 UI/mainwindow.h
-/Users/alexonghena/Documents/workspace/c++/3112-Project/UI/mainwindow.h
+/Users/dawsonheide/CLionProjects/3112-Project/UI/mainwindow.h
 UI/taskwindow.h
-/Users/alexonghena/Documents/workspace/c++/3112-Project/UI/taskwindow.h
+/Users/dawsonheide/CLionProjects/3112-Project/UI/taskwindow.h
 
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QDebug
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QDebug
 qdebug.h
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qdebug.h
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qdebug.h
 
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qdebug.h
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qdebug.h
 QtCore/qalgorithms.h
 -
 QtCore/qhash.h
@@ -116,27 +122,27 @@ map
 utility
 -
 
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtCore.framework/QtCore
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtCore.framework/QtCore
 
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtGui.framework/QtGui
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtGui.framework/QtGui
 
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QApplication
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QApplication
 qapplication.h
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
 
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QInputDialog
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QInputDialog
 qinputdialog.h
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qinputdialog.h
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qinputdialog.h
 
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMainWindow
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMainWindow
 qmainwindow.h
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h
 
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QPushButton
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QPushButton
 qpushbutton.h
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h
 
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtCore/qcoreapplication.h
@@ -154,7 +160,7 @@ QtWidgets/qdesktopwidget.h
 QtGui/qguiapplication.h
 -
 
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qinputdialog.h
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qinputdialog.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtCore/qstring.h
@@ -164,7 +170,7 @@ QtWidgets/qlineedit.h
 QtWidgets/qdialog.h
 -
 
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qwidget.h
@@ -172,7 +178,7 @@ QtWidgets/qwidget.h
 QtWidgets/qtabwidget.h
 -
 
-/Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h
+/Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qabstractbutton.h

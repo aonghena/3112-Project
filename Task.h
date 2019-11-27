@@ -2,23 +2,24 @@
 // Created by Dawson Heide on 11/14/19.
 //
 
-#include <string>
-
-using namespace std;
 
 #ifndef TODOS_TASK_H
 #define TODOS_TASK_H
+
+#include <string>
+#include "Database.h"
+
+using namespace std;
 
 class Task {
 
 protected:
 
-    static int currentId;
     int id;
     string title;
     string description;
     int user_id;
-
+    int completed = 0;
 
 public:
 
@@ -26,8 +27,6 @@ public:
         this->title = title;
         this->description = description;
         this->user_id = userId;
-        this->id=currentId;
-        currentId++;
     }
 
     int getId() const {
@@ -58,8 +57,25 @@ public:
         user_id = userId;
     }
 
-};
+    int isCompleted() const {
+        return completed;
+    }
 
-int Task::currentId = 1;
+    void complete() {
+        this->completed = !this->completed;
+    }
+
+    virtual void save(Database *database) {
+        cout << "Task Save" << endl;
+        if(this->id == 0) {
+            this->id = database->createTask(this->title, this->description, this->user_id);
+        } else {
+            database->updateTask(this->id, this->title, this->description, this->completed);
+        }
+    }
+
+
+
+};
 
 #endif //TODOS_TASK_H
