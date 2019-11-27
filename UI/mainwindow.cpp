@@ -8,12 +8,6 @@
 #include "taskwindow.h"
 
 
-/**
- * Are you a c++ program? Because you have std::
-*i'm sorry*
- */
-
-
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::MainWindow)
@@ -29,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
     // Populate our model
     model->setStringList(List);
 
+    ui->listView->setModel(model);
     ui->listView->setModel(model);
 
     QObject::connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(onButtonClick()));

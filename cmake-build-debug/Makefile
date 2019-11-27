@@ -163,6 +163,60 @@ Todos_autogen/mocs_compilation.cpp.s:
 	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.s
 .PHONY : Todos_autogen/mocs_compilation.cpp.s
 
+UI/loginwindow.o: UI/loginwindow.cpp.o
+
+.PHONY : UI/loginwindow.o
+
+# target to build an object file
+UI/loginwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/UI/loginwindow.cpp.o
+.PHONY : UI/loginwindow.cpp.o
+
+UI/loginwindow.i: UI/loginwindow.cpp.i
+
+.PHONY : UI/loginwindow.i
+
+# target to preprocess a source file
+UI/loginwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/UI/loginwindow.cpp.i
+.PHONY : UI/loginwindow.cpp.i
+
+UI/loginwindow.s: UI/loginwindow.cpp.s
+
+.PHONY : UI/loginwindow.s
+
+# target to generate assembly for a file
+UI/loginwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/UI/loginwindow.cpp.s
+.PHONY : UI/loginwindow.cpp.s
+
+UI/registerwindow.o: UI/registerwindow.cpp.o
+
+.PHONY : UI/registerwindow.o
+
+# target to build an object file
+UI/registerwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/UI/registerwindow.cpp.o
+.PHONY : UI/registerwindow.cpp.o
+
+UI/registerwindow.i: UI/registerwindow.cpp.i
+
+.PHONY : UI/registerwindow.i
+
+# target to preprocess a source file
+UI/registerwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/UI/registerwindow.cpp.i
+.PHONY : UI/registerwindow.cpp.i
+
+UI/registerwindow.s: UI/registerwindow.cpp.s
+
+.PHONY : UI/registerwindow.s
+
+# target to generate assembly for a file
+UI/registerwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/Todos.dir/build.make CMakeFiles/Todos.dir/UI/registerwindow.cpp.s
+.PHONY : UI/registerwindow.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -257,6 +311,12 @@ help:
 	@echo "... Todos_autogen/mocs_compilation.o"
 	@echo "... Todos_autogen/mocs_compilation.i"
 	@echo "... Todos_autogen/mocs_compilation.s"
+	@echo "... UI/loginwindow.o"
+	@echo "... UI/loginwindow.i"
+	@echo "... UI/loginwindow.s"
+	@echo "... UI/registerwindow.o"
+	@echo "... UI/registerwindow.i"
+	@echo "... UI/registerwindow.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

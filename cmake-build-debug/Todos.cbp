@@ -124,6 +124,24 @@
 		<Unit filename="/Users/dawsonheide/CLionProjects/3112-Project/Task.h">
 			<Option target="Todos"/>
 		</Unit>
+		<Unit filename="/Users/dawsonheide/CLionProjects/3112-Project/UI/loginwindow.cpp">
+			<Option target="Todos"/>
+		</Unit>
+		<Unit filename="/Users/dawsonheide/CLionProjects/3112-Project/UI/loginwindow.h">
+			<Option target="Todos"/>
+		</Unit>
+		<Unit filename="/Users/dawsonheide/CLionProjects/3112-Project/UI/loginwindow.ui">
+			<Option target="Todos"/>
+		</Unit>
+		<Unit filename="/Users/dawsonheide/CLionProjects/3112-Project/UI/registerwindow.cpp">
+			<Option target="Todos"/>
+		</Unit>
+		<Unit filename="/Users/dawsonheide/CLionProjects/3112-Project/UI/registerwindow.h">
+			<Option target="Todos"/>
+		</Unit>
+		<Unit filename="/Users/dawsonheide/CLionProjects/3112-Project/UI/registerwindow.ui">
+			<Option target="Todos"/>
+		</Unit>
 		<Unit filename="/Users/dawsonheide/CLionProjects/3112-Project/UrgentTask.h">
 			<Option target="Todos"/>
 		</Unit>

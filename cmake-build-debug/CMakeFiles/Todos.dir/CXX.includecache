@@ -22,6 +22,18 @@ string
 Database.h
 /Users/dawsonheide/CLionProjects/3112-Project/Database.h
 
+/Users/dawsonheide/CLionProjects/3112-Project/UI/loginwindow.h
+QMainWindow
+-
+QDebug
+-
+QtGui
+-
+QtCore
+-
+QInputDialog
+-
+
 /Users/dawsonheide/CLionProjects/3112-Project/UI/mainwindow.h
 QMainWindow
 -
@@ -62,28 +74,6 @@ Task.h
 Database.h
 /Users/dawsonheide/CLionProjects/3112-Project/Database.h
 
-/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/Todos_autogen/KRKR4BN5RM/moc_mainwindow.cpp
-../../../UI/mainwindow.h
-/Users/dawsonheide/CLionProjects/3112-Project/UI/mainwindow.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
-/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/Todos_autogen/KRKR4BN5RM/moc_taskwindow.cpp
-../../../UI/taskwindow.h
-/Users/dawsonheide/CLionProjects/3112-Project/UI/taskwindow.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
-/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/Todos_autogen/mocs_compilation.cpp
-KRKR4BN5RM/moc_mainwindow.cpp
-/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/Todos_autogen/KRKR4BN5RM/moc_mainwindow.cpp
-KRKR4BN5RM/moc_taskwindow.cpp
-/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/Todos_autogen/KRKR4BN5RM/moc_taskwindow.cpp
-
 /Users/dawsonheide/CLionProjects/3112-Project/main.cpp
 iostream
 -
@@ -107,6 +97,10 @@ UI/mainwindow.h
 /Users/dawsonheide/CLionProjects/3112-Project/UI/mainwindow.h
 UI/taskwindow.h
 /Users/dawsonheide/CLionProjects/3112-Project/UI/taskwindow.h
+UI/loginwindow.h
+/Users/dawsonheide/CLionProjects/3112-Project/UI/loginwindow.h
+User.h
+/Users/dawsonheide/CLionProjects/3112-Project/User.h
 
 /Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QDebug
 qdebug.h

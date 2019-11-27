@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/Todos_autogen/mocs_compilation.cpp" "/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o"
+  "/Users/dawsonheide/CLionProjects/3112-Project/UI/loginwindow.cpp" "/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles/Todos.dir/UI/loginwindow.cpp.o"
+  "/Users/dawsonheide/CLionProjects/3112-Project/UI/registerwindow.cpp" "/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles/Todos.dir/UI/registerwindow.cpp.o"
   "/Users/dawsonheide/CLionProjects/3112-Project/main.cpp" "/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles/Todos.dir/main.cpp.o"
   "/Users/dawsonheide/CLionProjects/3112-Project/ui/mainwindow.cpp" "/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles/Todos.dir/ui/mainwindow.cpp.o"
   "/Users/dawsonheide/CLionProjects/3112-Project/ui/taskwindow.cpp" "/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles/Todos.dir/ui/taskwindow.cpp.o"
