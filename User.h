@@ -65,10 +65,6 @@ public:
         this->password = password;
     }
 
-    const vector<Task> &getTasks() const {
-        return tasks;
-    }
-
     void save(Database *database) {
         if(this->id == 0) {
             this->id = database->createUser(this->name, this->email, this->password);

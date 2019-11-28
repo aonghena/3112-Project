@@ -29,6 +29,13 @@ public:
         this->user_id = userId;
     }
 
+    Task(int id, const string &title, const string &description, int userId, int completed) {
+        this->title = title;
+        this->description = description;
+        this->user_id = userId;
+        this->completed = 0;
+    }
+
     int getId() const {
         return id;
     }
@@ -74,7 +81,22 @@ public:
         }
     }
 
+    static vector<Task*> getTasks(Database *database) {
 
+        vector<Task*> tasks;
+        vector<TaskData*> taskData = database->getTaskData();
+
+        for(int x = 0; x < taskData.size(); x++) {
+            tasks.push_back(new Task(taskData[x]->id, taskData[x]->title, taskData[x]->description,
+                                     taskData[x]->user_id, taskData[x]->completed));
+        }
+//        for(auto & x : taskData) {
+//            tasks.push_back(new Task(x->id, x->title, x->description,
+//                    x->user_id, x->completed));
+//        }
+        return tasks;
+
+    }
 
 };
 

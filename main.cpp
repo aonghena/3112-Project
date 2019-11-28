@@ -21,10 +21,25 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    Database *db = new Database();
+//    Database *db = new Database();
+//    vector<Task*> tasks = Task::getTasks(db);
 
-    QApplication a(argc, argv);
-    LoginWindow w;
-    w.show();
-    return a.exec();
+//    User *user = new User("dawson", "dheide@uncc.edu", "password123");
+//    user->save(db);
+//
+//    Task *task1 = new Task("Garbage", "Take out trash", 1);
+//    task1->save(db);
+//
+//    Task *task2 = new Task("Homework", "Finish homework", 1);
+//    task2->save(db);
+
+//    for(auto & x : tasks) {
+//        cout << x->getTitle() << " " << x->getDescription() << endl;
+//    }
+
+    return 0;
+//    QApplication a(argc, argv);
+//    LoginWindow w;
+//    w.show();
+//    return a.exec();
 }
