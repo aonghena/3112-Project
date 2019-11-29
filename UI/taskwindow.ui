@@ -65,7 +65,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit"/>
+          <widget class="QLineEdit" name="title"/>
          </item>
         </layout>
        </item>
@@ -79,7 +79,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="spinBox">
+          <widget class="QSpinBox" name="priority">
            <property name="maximum">
             <number>10</number>
            </property>
@@ -98,7 +98,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="textEdit"/>
+        <widget class="QTextEdit" name="description"/>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_5">

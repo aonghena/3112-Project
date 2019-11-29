@@ -15,15 +15,31 @@ TaskWindow::TaskWindow(QWidget *parent) :
         ui(new Ui::TaskWindow)
 {
     ui->setupUi(this);
-    QObject::connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(onButtonClick()));
 
+    QObject::connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(onButtonClick()));
 }
 
 void TaskWindow::onButtonClick() {
-    MainWindow *wdg = new MainWindow;
+
+    string title = ui->title->text().toStdString();
+    string description = ui->description->toPlainText().toStdString();
+    int priority = ui->priority->cleanText().toInt();
+
+    cout << title << description << priority << endl;
+
+    Database *database = MainWindow::database.get();
+//    if(priority > 0) {
+//        UrgentTask *task = new UrgentTask(title, description, MainWindow::currentUser->getId(), priority);
+//        task->save(database);
+//    } else {
+//        Task *task = new Task(title, description, MainWindow::currentUser->getId());
+//        task->save(database);
+//    }
+
+    MainWindow::currentUser->createTask(database, title, description, priority);
+    MainWindow *wdg = new MainWindow();
     wdg->show();
     hide();
-    qDebug () << "Button clicked";
 };
 
 

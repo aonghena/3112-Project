@@ -37,9 +37,9 @@ int main(int argc, char *argv[])
 //        cout << x->getTitle() << " " << x->getDescription() << endl;
 //    }
 
-    return 0;
-//    QApplication a(argc, argv);
-//    LoginWindow w;
-//    w.show();
-//    return a.exec();
+//    return 0;
+    QApplication a(argc, argv);
+    LoginWindow w;
+    w.show();
+    return a.exec();
 }

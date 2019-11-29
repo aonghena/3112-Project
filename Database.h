@@ -25,15 +25,9 @@ struct TaskData {
     string description;
     int user_id;
     int completed;
+    int priority;
 };
 
-struct UrgentTaskData {
-    int id;
-    string title;
-    string description;
-    int user_id;
-    int completed;
-};
 
 class Database {
 private:
@@ -66,7 +60,7 @@ private:
                      "description     TEXT     NOT NULL,  "
                      "user_id         INT     NOT NULL,"
                      "completed  INT NOT NULL DEFAULT 0,"
-                     "priority INT DEFAULT -1);";
+                     "priority INT DEFAULT 0);";
 
         exit = sqlite3_exec(db, qry.c_str(), nullptr, 0, &messageError);
 
@@ -89,14 +83,15 @@ public:
         this->createTaskTable();
     }
 
-    vector<UserData *> getUserData() {
+    vector<UserData *> getUserData(string qry = "") {
 
-        string qry = "SELECT * FROM User";
+        if(qry == "") qry = "SELECT * FROM User";
+        cout << qry << endl;
         vector<UserData *> users;
         char *messageError;
 
         sqlite3_stmt *stmt;
-        int exit = sqlite3_prepare_v2(db, "SELECT * FROM User",-1, &stmt, NULL);
+        int exit = sqlite3_prepare_v2(db, qry.c_str(),-1, &stmt, NULL);
 
         if (exit != SQLITE_OK) {
             cerr << "SELECT failed: " << sqlite3_errmsg(db) << endl;
@@ -121,7 +116,7 @@ public:
 
     vector<TaskData *> getTaskData() {
 
-        string qry = "SELECT * FROM Task WHERE priority = -1";
+        string qry = "SELECT * FROM Task";
         vector<TaskData *> tasks;
         char *messageError;
 
@@ -138,6 +133,7 @@ public:
             task->description = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2));
             task->user_id = atoi(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3)));
             task->completed = atoi(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 4)));
+            task->priority = atoi(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 5)));
             // let's assume number can be NULL:
             tasks.push_back(task);
         }
@@ -168,11 +164,11 @@ public:
         return last_id;
     }
 
-    int createTask(string& title, string& description, int user_id, int priority = -1) {
+    int createTask(string& title, string& description, int user_id, int priority = 0) {
 
         string qry;
 
-        if(priority != -1) {
+        if(priority != 0) {
             qry = "INSERT INTO Task (title, description, user_id, priority)"
                          " VALUES(\"" + title + "\",\"" + description + "\"," + to_string(user_id) + "," + to_string(priority) + ");";
         } else {
@@ -193,11 +189,11 @@ public:
         return last_id;
     }
 
-    void updateTask(int id, string& title, string& description, int completed, int priority = -1) {
+    void updateTask(int id, string& title, string& description, int completed, int priority = 0) {
 
         cout << "update task" << endl;
         string qry;
-        if(priority != -1) {
+        if(priority != 0) {
             qry = "UPDATE Task SET title=\"" + title + "\","
                   + "description=\"" + description + "\","
                   + "completed=" + to_string(completed) + ","

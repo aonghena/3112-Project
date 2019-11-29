@@ -29,14 +29,22 @@ void RegisterWindow::onLoginButtonClick() {
 };
 
 void RegisterWindow::onRegButtonClick() {
+
     bool pass = false;
+    User *user = nullptr;
 
     std::string email = ui->usernameInput->text().toStdString();
     std::string password = ui->passwordInput->text().toStdString();
     std::string name = ui->nameInput->text().toStdString();
 
-    if(!(email == "" || password == "" || name == "")){
-         pass = true;
+    Database *database = MainWindow::database.get();
+
+    if(!(email == "" || password == "" || name == "")
+        && User::getByEmail(database, email) == nullptr){
+        pass = true;
+        user = new User(name, email, password);
+        user->save(database);
+        MainWindow::currentUser = shared_ptr<User> (user);
     }else{
         QMessageBox::information(
                 this,
@@ -45,10 +53,8 @@ void RegisterWindow::onRegButtonClick() {
     }
 
 
-    if(pass){
-
+    if(pass && MainWindow::currentUser != nullptr){
         //add to the database here
-
         MainWindow *wdg = new MainWindow;
         wdg->show();
         hide();

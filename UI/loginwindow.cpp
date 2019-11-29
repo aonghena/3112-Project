@@ -28,20 +28,25 @@ void LoginWindow::onSignButtonClick() {
     std::string email = ui->emailInput->text().toStdString();
     std::string password = ui->passwordInput->text().toStdString();
 
-    if(!(email == "" || password == "")){
+    Database *db = MainWindow::database.get();
+    User *user = User::getByEmailAndPassword(db, email, password);
+
+    if(user != nullptr){
         pass = true;
+        MainWindow::currentUser = shared_ptr<User> (user);
     }else{
         QMessageBox::information(
                 this,
                 tr("TODO"),
-                tr("Invalid INFO.") );
+                tr("Invalid email or password.") );
     }
     ///
     ///Database verification here
     ///
 
-    if(pass){
-        MainWindow *wdg = new MainWindow;
+
+    if(pass && MainWindow::currentUser != nullptr){
+        MainWindow *wdg = new MainWindow();
         wdg->show();
         hide();
     }
@@ -52,7 +57,6 @@ void LoginWindow::onRegButtonClick() {
     RegisterWindow *wdg = new RegisterWindow;
     wdg->show();
     hide();
-
 };
 
 

@@ -24,6 +24,13 @@ public:
         this->priority = priority;
     }
 
+    UrgentTask(int id, const string &title, const string &description, int userId, int completed, int priority)
+            : Task(title, description, userId) {
+        this->priority = priority;
+        this->id = id;
+        this->completed = completed;
+    }
+
     int getPriority() const {
         return this->priority;
     }
@@ -38,7 +45,6 @@ public:
         } else {
             database->updateTask(this->id, this->title, this->description, this->completed, this->priority);
         }
-
     }
 
 };

@@ -15,7 +15,7 @@ class Task {
 
 protected:
 
-    int id;
+    int id = 0;
     string title;
     string description;
     int user_id;
@@ -30,10 +30,11 @@ public:
     }
 
     Task(int id, const string &title, const string &description, int userId, int completed) {
+        this->id = id;
         this->title = title;
         this->description = description;
         this->user_id = userId;
-        this->completed = 0;
+        this->completed = completed;
     }
 
     int getId() const {
@@ -73,7 +74,6 @@ public:
     }
 
     virtual void save(Database *database) {
-        cout << "Task Save" << endl;
         if(this->id == 0) {
             this->id = database->createTask(this->title, this->description, this->user_id);
         } else {

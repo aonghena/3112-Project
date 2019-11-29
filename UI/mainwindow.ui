@@ -11,15 +11,12 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Todo</string>
+   <string>Todo Task Manager</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>TODO</string>
-      </property>
+     <widget class="QLabel" name="nameLabel">
       <property name="alignment">
        <set>Qt::AlignHCenter|Qt::AlignTop</set>
       </property>
@@ -89,14 +86,10 @@
     <item row="3" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QListView" name="listView"/>
+       <widget class="QListView" name="titleListView"/>
       </item>
       <item>
-       <widget class="QPlainTextEdit" name="plainTextEdit">
-        <property name="readOnly">
-         <bool>false</bool>
-        </property>
-       </widget>
+       <widget class="QListView" name="descListView"/>
       </item>
      </layout>
     </item>

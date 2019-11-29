@@ -10,6 +10,7 @@
 #include <string>
 #include <vector>
 #include "Task.h"
+#include "UrgentTask.h"
 #include "Database.h"
 
 class User {
@@ -20,7 +21,6 @@ private:
     string name;
     string email;
     string password;
-    vector<Task> tasks;
 
 public:
 
@@ -71,6 +71,37 @@ public:
         }
     }
 
+    vector<Task *> getTasks(Database *database) {
+
+        vector<Task *> tasks;
+        vector<TaskData *> data = database->getTaskData();
+
+        for(auto & x: data) {
+            if(x->user_id == this->id) {
+                if(x->priority > 0) {
+                    tasks.push_back(new UrgentTask(x->id, x->title, x->description, x->user_id, x->completed, x->priority));
+                } else {
+                    tasks.push_back(new Task(x->id, x->title, x->description, x->user_id, x->completed));
+                }
+            }
+        }
+
+        return tasks;
+
+    }
+
+    void createTask(Database *database, string title, string description, int priority = 0) {
+
+        if(priority > 0) {
+            UrgentTask *task = new UrgentTask(title, description, this->id, priority);
+            task->save(database);
+        } else {
+            Task *task = new Task(title, description, this->id);
+            task->save(database);
+        }
+
+    }
+
     static vector<User *> getAll(Database *database) {
         vector<User *> users;
         vector<UserData *> data = database->getUserData();
@@ -79,6 +110,29 @@ public:
             users.push_back(new User(data[x]->id, data[x]->name, data[x]->email, data[x]->password));
         }
         return users;
+    }
+
+    static User* getByEmailAndPassword(Database *database, string email, string password) {
+
+        vector<UserData *> data = database->getUserData("SELECT * FROM User"
+                                                        " WHERE email=\"" + email +
+                                                        "\" and password=\"" + password +"\";");
+
+        if(data.size() > 1 || data.empty()) {
+            return nullptr;
+        }
+        return new User(data[0]->id, data[0]->name, data[0]->email, data[0]->password);
+
+    }
+
+    static User* getByEmail(Database *database, string email) {
+        vector<UserData *> data = database->getUserData("SELECT * FROM User"
+                                                        " WHERE email=\"" + email +"\";");
+
+        if(data.size() > 1 || data.empty()) {
+            return nullptr;
+        }
+        return new User(data[0]->id, data[0]->name, data[0]->email, data[0]->password);
     }
 
 };
