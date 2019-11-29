@@ -79,9 +79,9 @@ public:
         for(auto & x: data) {
             if(x->user_id == this->id) {
                 if(x->priority > 0) {
-                    tasks.push_back(new UrgentTask(x->id, x->title, x->description, x->user_id, x->completed, x->priority));
+                    tasks.push_back(new UrgentTask(x->id, x->title, x->description, x->user_id, x->completed, x->priority, x->created_at));
                 } else {
-                    tasks.push_back(new Task(x->id, x->title, x->description, x->user_id, x->completed));
+                    tasks.push_back(new Task(x->id, x->title, x->description, x->user_id, x->completed, x->created_at));
                 }
             }
         }

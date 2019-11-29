@@ -20,6 +20,7 @@ protected:
     string description;
     int user_id;
     int completed = 0;
+    string created_at;
 
 public:
 
@@ -27,18 +28,30 @@ public:
         this->title = title;
         this->description = description;
         this->user_id = userId;
+        time_t t ;
+        struct tm *tmp ;
+        char MY_TIME[50];
+        time( &t );
+        tmp = localtime( &t );
+        strftime(MY_TIME, sizeof(MY_TIME), "%D %R", tmp);
+        this->created_at = MY_TIME;
     }
 
-    Task(int id, const string &title, const string &description, int userId, int completed) {
+    Task(int id, const string &title, const string &description, int userId, int completed, string created_at) {
         this->id = id;
         this->title = title;
         this->description = description;
         this->user_id = userId;
         this->completed = completed;
+        this->created_at = created_at;
     }
 
     int getId() const {
         return id;
+    }
+
+    const string &getCreatedAt() const {
+        return created_at;
     }
 
     const string &getTitle() const {
@@ -75,7 +88,7 @@ public:
 
     virtual void save(Database *database) {
         if(this->id == 0) {
-            this->id = database->createTask(this->title, this->description, this->user_id);
+            this->id = database->createTask(this->title, this->description, this->user_id, this->created_at);
         } else {
             database->updateTask(this->id, this->title, this->description, this->completed);
         }
@@ -88,12 +101,9 @@ public:
 
         for(int x = 0; x < taskData.size(); x++) {
             tasks.push_back(new Task(taskData[x]->id, taskData[x]->title, taskData[x]->description,
-                                     taskData[x]->user_id, taskData[x]->completed));
+                                     taskData[x]->user_id, taskData[x]->completed, taskData[x]->created_at));
         }
-//        for(auto & x : taskData) {
-//            tasks.push_back(new Task(x->id, x->title, x->description,
-//                    x->user_id, x->completed));
-//        }
+
         return tasks;
 
     }

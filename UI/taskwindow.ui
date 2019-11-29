@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Todo</string>
+   <string>Todo Task Manager </string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
@@ -90,7 +90,7 @@
        <item>
         <widget class="QLabel" name="label_4">
          <property name="text">
-          <string>Task Info</string>
+          <string>Description</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -99,31 +99,6 @@
        </item>
        <item>
         <widget class="QTextEdit" name="description"/>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_5">
-         <item>
-          <widget class="QLabel" name="label_2">
-           <property name="text">
-            <string>Date</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QDateEdit" name="dateEdit">
-           <property name="minimumDateTime">
-            <datetime>
-             <hour>0</hour>
-             <minute>0</minute>
-             <second>0</second>
-             <year>2019</year>
-             <month>11</month>
-             <day>18</day>
-            </datetime>
-           </property>
-          </widget>
-         </item>
-        </layout>
        </item>
       </layout>
      </item>

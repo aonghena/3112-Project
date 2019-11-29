@@ -24,10 +24,9 @@ public:
         this->priority = priority;
     }
 
-    UrgentTask(int id, const string &title, const string &description, int userId, int completed, int priority)
-            : Task(title, description, userId) {
+    UrgentTask(int id, const string &title, const string &description, int userId, int completed, int priority, string created_at)
+            : Task(id, title, description, userId, completed, created_at) {
         this->priority = priority;
-        this->id = id;
         this->completed = completed;
     }
 
@@ -41,7 +40,7 @@ public:
 
     void save(Database *database) override {
         if(this->id == 0) {
-            this->id = database->createTask(this->title, this->description, this->user_id, this->priority);
+            this->id = database->createTask(this->title, this->description, this->user_id, this->created_at, this->priority);
         } else {
             database->updateTask(this->id, this->title, this->description, this->completed, this->priority);
         }

@@ -25,6 +25,7 @@ struct TaskData {
     string description;
     int user_id;
     int completed;
+    string created_at;
     int priority;
 };
 
@@ -57,8 +58,9 @@ private:
         string qry = "CREATE TABLE Task("
                      "id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "
                      "title           TEXT    NOT NULL, "
-                     "description     TEXT     NOT NULL,  "
+                     "description     TEXT    NOT NULL,  "
                      "user_id         INT     NOT NULL,"
+                     "created_at            TEXT    NOT NULL,"
                      "completed  INT NOT NULL DEFAULT 0,"
                      "priority INT DEFAULT 0);";
 
@@ -85,13 +87,13 @@ public:
 
     vector<UserData *> getUserData(string qry = "") {
 
-        if(qry == "") qry = "SELECT * FROM User";
+        if (qry == "") qry = "SELECT * FROM User";
         cout << qry << endl;
         vector<UserData *> users;
         char *messageError;
 
         sqlite3_stmt *stmt;
-        int exit = sqlite3_prepare_v2(db, qry.c_str(),-1, &stmt, NULL);
+        int exit = sqlite3_prepare_v2(db, qry.c_str(), -1, &stmt, NULL);
 
         if (exit != SQLITE_OK) {
             cerr << "SELECT failed: " << sqlite3_errmsg(db) << endl;
@@ -99,9 +101,9 @@ public:
         while ((exit = sqlite3_step(stmt)) == SQLITE_ROW) {
             UserData *user = new UserData();
             user->id = sqlite3_column_int(stmt, 0);
-            user->name = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1));
-            user->email = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2));
-            user->password = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3));
+            user->name = reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1));
+            user->email = reinterpret_cast<const char *>(sqlite3_column_text(stmt, 2));
+            user->password = reinterpret_cast<const char *>(sqlite3_column_text(stmt, 3));
             // let's assume number can be NULL:
             users.push_back(user);
         }
@@ -121,7 +123,7 @@ public:
         char *messageError;
 
         sqlite3_stmt *stmt;
-        int exit = sqlite3_prepare_v2(db, qry.c_str(),-1, &stmt, NULL);
+        int exit = sqlite3_prepare_v2(db, qry.c_str(), -1, &stmt, NULL);
 
         if (exit != SQLITE_OK) {
             cerr << "SELECT failed: " << sqlite3_errmsg(db) << endl;
@@ -129,11 +131,12 @@ public:
         while ((exit = sqlite3_step(stmt)) == SQLITE_ROW) {
             TaskData *task = new TaskData();
             task->id = sqlite3_column_int(stmt, 0);
-            task->title = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1));
-            task->description = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2));
-            task->user_id = atoi(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3)));
-            task->completed = atoi(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 4)));
-            task->priority = atoi(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 5)));
+            task->title = reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1));
+            task->description = reinterpret_cast<const char *>(sqlite3_column_text(stmt, 2));
+            task->user_id = atoi(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 3)));
+            task->created_at = atoi(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 4)));
+            task->completed = atoi(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 5)));
+            task->priority = atoi(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 6)));
             // let's assume number can be NULL:
             tasks.push_back(task);
         }
@@ -146,7 +149,7 @@ public:
 
     }
 
-    int createUser(string& name, string& email, string& password) {
+    int createUser(string &name, string &email, string &password) {
         string qry = "INSERT INTO User (name, email, password)"
                      " VALUES(\"" + name + "\",\"" + email + "\",\"" + password + "\");";
 
@@ -164,16 +167,21 @@ public:
         return last_id;
     }
 
-    int createTask(string& title, string& description, int user_id, int priority = 0) {
+    int createTask(string &title, string &description, int user_id, string created_at, int priority = 0) {
 
         string qry;
-
-        if(priority != 0) {
-            qry = "INSERT INTO Task (title, description, user_id, priority)"
-                         " VALUES(\"" + title + "\",\"" + description + "\"," + to_string(user_id) + "," + to_string(priority) + ");";
+        if (priority != 0) {
+            qry = "INSERT INTO Task (title, description, user_id, created_at, priority)"
+                  " VALUES(\"" + title + "\",\"" + description + "\","
+                  + to_string(user_id) + ","
+                  + created_at + ","
+                  + to_string(priority) + ");";
         } else {
-            qry = "INSERT INTO Task (title, description, user_id)"
-                         " VALUES(\"" + title + "\",\"" + description + "\",\"" + to_string(user_id) + "\");";
+            qry = "INSERT INTO Task (title, description, created_at, user_id)"
+                  " VALUES(\"" + title + "\",\""
+                  + description + "\",\""
+                  + created_at + "\",\""
+                  + to_string(user_id) + "\");";
         }
 
         char *messageError;
@@ -189,11 +197,11 @@ public:
         return last_id;
     }
 
-    void updateTask(int id, string& title, string& description, int completed, int priority = 0) {
+    void updateTask(int id, string &title, string &description, int completed, int priority = 0) {
 
         cout << "update task" << endl;
         string qry;
-        if(priority != 0) {
+        if (priority != 0) {
             qry = "UPDATE Task SET title=\"" + title + "\","
                   + "description=\"" + description + "\","
                   + "completed=" + to_string(completed) + ","
@@ -201,9 +209,9 @@ public:
                   + "WHERE id=" + to_string(id) + ";";
         } else {
             qry = "UPDATE Task SET title=\"" + title + "\","
-                         + "description=\"" + description + "\","
-                         + "completed=" + to_string(completed) + " "
-                         + "WHERE id=" + to_string(id) + ";";
+                  + "description=\"" + description + "\","
+                  + "completed=" + to_string(completed) + " "
+                  + "WHERE id=" + to_string(id) + ";";
         }
 
         cout << "qry: " << qry << endl;
