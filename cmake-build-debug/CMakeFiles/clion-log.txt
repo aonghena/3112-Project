@@ -1,4 +1,11 @@
-"/Users/dawsonheide/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=/Users/dawsonheide/Qt/5.12.6/clang_64/lib/cmake -G "CodeBlocks - Unix Makefiles" /Users/dawsonheide/CLionProjects/3112-Project
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=/Users/alexonghena/Qt/5.12.6/clang_64/lib/cmake -G "CodeBlocks - Unix Makefiles" /Users/alexonghena/Documents/workspace/c++/3112-Project
+-- The CXX compiler identification is AppleClang 11.0.0.11000033
+-- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
+-- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug
+-- Build files have been written to: /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug

@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/dawsonheide/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = "/Users/dawsonheide/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/dawsonheide/CLionProjects/3112-Project
+CMAKE_SOURCE_DIR = /Users/alexonghena/Documents/workspace/c++/3112-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Todos.dir/depend.make
@@ -59,81 +59,81 @@ include CMakeFiles/Todos.dir/flags.make
 
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: CMakeFiles/Todos.dir/flags.make
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: Todos_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o -c /Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/Todos_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o -c /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/Todos_autogen/mocs_compilation.cpp
 
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/Todos_autogen/mocs_compilation.cpp > CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/Todos_autogen/mocs_compilation.cpp > CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/Todos_autogen/mocs_compilation.cpp -o CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/Todos_autogen/mocs_compilation.cpp -o CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/Todos.dir/main.cpp.o: CMakeFiles/Todos.dir/flags.make
 CMakeFiles/Todos.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Todos.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Todos.dir/main.cpp.o -c /Users/dawsonheide/CLionProjects/3112-Project/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Todos.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Todos.dir/main.cpp.o -c /Users/alexonghena/Documents/workspace/c++/3112-Project/main.cpp
 
 CMakeFiles/Todos.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Todos.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dawsonheide/CLionProjects/3112-Project/main.cpp > CMakeFiles/Todos.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexonghena/Documents/workspace/c++/3112-Project/main.cpp > CMakeFiles/Todos.dir/main.cpp.i
 
 CMakeFiles/Todos.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Todos.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dawsonheide/CLionProjects/3112-Project/main.cpp -o CMakeFiles/Todos.dir/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexonghena/Documents/workspace/c++/3112-Project/main.cpp -o CMakeFiles/Todos.dir/main.cpp.s
 
 CMakeFiles/Todos.dir/ui/mainwindow.cpp.o: CMakeFiles/Todos.dir/flags.make
 CMakeFiles/Todos.dir/ui/mainwindow.cpp.o: ../ui/mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Todos.dir/ui/mainwindow.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Todos.dir/ui/mainwindow.cpp.o -c /Users/dawsonheide/CLionProjects/3112-Project/ui/mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Todos.dir/ui/mainwindow.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Todos.dir/ui/mainwindow.cpp.o -c /Users/alexonghena/Documents/workspace/c++/3112-Project/ui/mainwindow.cpp
 
 CMakeFiles/Todos.dir/ui/mainwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Todos.dir/ui/mainwindow.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dawsonheide/CLionProjects/3112-Project/ui/mainwindow.cpp > CMakeFiles/Todos.dir/ui/mainwindow.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexonghena/Documents/workspace/c++/3112-Project/ui/mainwindow.cpp > CMakeFiles/Todos.dir/ui/mainwindow.cpp.i
 
 CMakeFiles/Todos.dir/ui/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Todos.dir/ui/mainwindow.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dawsonheide/CLionProjects/3112-Project/ui/mainwindow.cpp -o CMakeFiles/Todos.dir/ui/mainwindow.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexonghena/Documents/workspace/c++/3112-Project/ui/mainwindow.cpp -o CMakeFiles/Todos.dir/ui/mainwindow.cpp.s
 
 CMakeFiles/Todos.dir/ui/taskwindow.cpp.o: CMakeFiles/Todos.dir/flags.make
 CMakeFiles/Todos.dir/ui/taskwindow.cpp.o: ../ui/taskwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Todos.dir/ui/taskwindow.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Todos.dir/ui/taskwindow.cpp.o -c /Users/dawsonheide/CLionProjects/3112-Project/ui/taskwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Todos.dir/ui/taskwindow.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Todos.dir/ui/taskwindow.cpp.o -c /Users/alexonghena/Documents/workspace/c++/3112-Project/ui/taskwindow.cpp
 
 CMakeFiles/Todos.dir/ui/taskwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Todos.dir/ui/taskwindow.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dawsonheide/CLionProjects/3112-Project/ui/taskwindow.cpp > CMakeFiles/Todos.dir/ui/taskwindow.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexonghena/Documents/workspace/c++/3112-Project/ui/taskwindow.cpp > CMakeFiles/Todos.dir/ui/taskwindow.cpp.i
 
 CMakeFiles/Todos.dir/ui/taskwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Todos.dir/ui/taskwindow.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dawsonheide/CLionProjects/3112-Project/ui/taskwindow.cpp -o CMakeFiles/Todos.dir/ui/taskwindow.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexonghena/Documents/workspace/c++/3112-Project/ui/taskwindow.cpp -o CMakeFiles/Todos.dir/ui/taskwindow.cpp.s
 
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: CMakeFiles/Todos.dir/flags.make
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: ../UI/loginwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Todos.dir/UI/loginwindow.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Todos.dir/UI/loginwindow.cpp.o -c /Users/dawsonheide/CLionProjects/3112-Project/UI/loginwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Todos.dir/UI/loginwindow.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Todos.dir/UI/loginwindow.cpp.o -c /Users/alexonghena/Documents/workspace/c++/3112-Project/UI/loginwindow.cpp
 
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Todos.dir/UI/loginwindow.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dawsonheide/CLionProjects/3112-Project/UI/loginwindow.cpp > CMakeFiles/Todos.dir/UI/loginwindow.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexonghena/Documents/workspace/c++/3112-Project/UI/loginwindow.cpp > CMakeFiles/Todos.dir/UI/loginwindow.cpp.i
 
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Todos.dir/UI/loginwindow.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dawsonheide/CLionProjects/3112-Project/UI/loginwindow.cpp -o CMakeFiles/Todos.dir/UI/loginwindow.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexonghena/Documents/workspace/c++/3112-Project/UI/loginwindow.cpp -o CMakeFiles/Todos.dir/UI/loginwindow.cpp.s
 
 CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: CMakeFiles/Todos.dir/flags.make
 CMakeFiles/Todos.dir/UI/registerwindow.cpp.o: ../UI/registerwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Todos.dir/UI/registerwindow.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Todos.dir/UI/registerwindow.cpp.o -c /Users/dawsonheide/CLionProjects/3112-Project/UI/registerwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Todos.dir/UI/registerwindow.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Todos.dir/UI/registerwindow.cpp.o -c /Users/alexonghena/Documents/workspace/c++/3112-Project/UI/registerwindow.cpp
 
 CMakeFiles/Todos.dir/UI/registerwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Todos.dir/UI/registerwindow.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dawsonheide/CLionProjects/3112-Project/UI/registerwindow.cpp > CMakeFiles/Todos.dir/UI/registerwindow.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexonghena/Documents/workspace/c++/3112-Project/UI/registerwindow.cpp > CMakeFiles/Todos.dir/UI/registerwindow.cpp.i
 
 CMakeFiles/Todos.dir/UI/registerwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Todos.dir/UI/registerwindow.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dawsonheide/CLionProjects/3112-Project/UI/registerwindow.cpp -o CMakeFiles/Todos.dir/UI/registerwindow.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexonghena/Documents/workspace/c++/3112-Project/UI/registerwindow.cpp -o CMakeFiles/Todos.dir/UI/registerwindow.cpp.s
 
 # Object files for target Todos
 Todos_OBJECTS = \
@@ -154,11 +154,11 @@ Todos: CMakeFiles/Todos.dir/ui/taskwindow.cpp.o
 Todos: CMakeFiles/Todos.dir/UI/loginwindow.cpp.o
 Todos: CMakeFiles/Todos.dir/UI/registerwindow.cpp.o
 Todos: CMakeFiles/Todos.dir/build.make
-Todos: /Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtWidgets.framework/QtWidgets
-Todos: /Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtGui.framework/QtGui
-Todos: /Users/dawsonheide/Qt/5.12.6/clang_64/lib/QtCore.framework/QtCore
+Todos: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/QtWidgets
+Todos: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtGui.framework/QtGui
+Todos: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtCore.framework/QtCore
 Todos: CMakeFiles/Todos.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Todos"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Todos"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Todos.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -171,6 +171,6 @@ CMakeFiles/Todos.dir/clean:
 .PHONY : CMakeFiles/Todos.dir/clean
 
 CMakeFiles/Todos.dir/depend:
-	cd /Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/dawsonheide/CLionProjects/3112-Project /Users/dawsonheide/CLionProjects/3112-Project /Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug /Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug /Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles/Todos.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/alexonghena/Documents/workspace/c++/3112-Project /Users/alexonghena/Documents/workspace/c++/3112-Project /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles/Todos.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Todos.dir/depend
 

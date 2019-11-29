@@ -43,7 +43,7 @@ public:
     {
         if (LoginWindow->objectName().isEmpty())
             LoginWindow->setObjectName(QString::fromUtf8("LoginWindow"));
-        LoginWindow->resize(227, 174);
+        LoginWindow->resize(227, 182);
         verticalLayout = new QVBoxLayout(LoginWindow);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
@@ -97,6 +97,7 @@ public:
 
         passwordInput = new QLineEdit(LoginWindow);
         passwordInput->setObjectName(QString::fromUtf8("passwordInput"));
+        passwordInput->setEchoMode(QLineEdit::Password);
 
         horizontalLayout_2->addWidget(passwordInput);
 

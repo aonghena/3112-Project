@@ -28,7 +28,8 @@ public:
 
 public slots:
     void onButtonClick();
-    void onTodoToggle();
+    void deleteTask();
+    void handleSelectionChanged(const QItemSelection& selection);
 
 private:
     Ui::MainWindow *ui;

@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/dawsonheide/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = "/Users/dawsonheide/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/dawsonheide/CLionProjects/3112-Project
+CMAKE_SOURCE_DIR = /Users/alexonghena/Documents/workspace/c++/3112-Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug
 
 # Utility rule file for Todos_autogen.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /Users/dawsonheide/CLionProjects/3112-Project/cmake-build-deb
 include CMakeFiles/Todos_autogen.dir/progress.make
 
 CMakeFiles/Todos_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target Todos"
-	"/Users/dawsonheide/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E cmake_autogen /Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles/Todos_autogen.dir/AutogenInfo.cmake Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target Todos"
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_autogen /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles/Todos_autogen.dir/AutogenInfo.cmake Debug
 
 Todos_autogen: CMakeFiles/Todos_autogen
 Todos_autogen: CMakeFiles/Todos_autogen.dir/build.make
@@ -72,6 +72,6 @@ CMakeFiles/Todos_autogen.dir/clean:
 .PHONY : CMakeFiles/Todos_autogen.dir/clean
 
 CMakeFiles/Todos_autogen.dir/depend:
-	cd /Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/dawsonheide/CLionProjects/3112-Project /Users/dawsonheide/CLionProjects/3112-Project /Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug /Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug /Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/CMakeFiles/Todos_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/alexonghena/Documents/workspace/c++/3112-Project /Users/alexonghena/Documents/workspace/c++/3112-Project /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug /Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/CMakeFiles/Todos_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Todos_autogen.dir/depend
 

@@ -14,7 +14,6 @@ MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::MainWindow)
 {
-//    QString qstr = QString::fromStdString("sdsd)");
     ui->setupUi(this);
 
     ui->nameLabel->setText(MainWindow::currentUser->getName().c_str());
@@ -40,32 +39,34 @@ MainWindow::MainWindow(QWidget *parent) :
     }
 
     ui->titleListView->setModel(titleModel);
-    ui->descListView->setModel(descModel);
-//    ui->listView->setModel(model);
 
+
+    if(tasks.size() != 0) {
+        string tempDesc = tasks[0]->getDescription()+"\n\n\n Date Created:"+tasks[0]->getCreatedAt();
+        ui->descText->setText(tempDesc.c_str());
+    }
     QObject::connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(onButtonClick()));
-    QObject::connect(ui->checkBox, SIGNAL(clicked()), this, SLOT(onTodoToggle()));
+    QObject::connect(ui->commandLinkButton, SIGNAL(clicked()), this, SLOT(deleteTask()));
+    connect(ui->titleListView->selectionModel(),
+            SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
+            this, SLOT(handleSelectionChanged(QItemSelection)));
+}
+
+void MainWindow::deleteTask(){
+    //todo remove or create task
 
 }
 
-void MainWindow::onTodoToggle(){
 
-//    model = new QStringListModel(this);
-//    QStringList List;
-//    if (ui->checkBox->isChecked()){
-//        List << "Go Food " << "Walk dasdasdasdthe " << "Sign Something";
-//    }else{
-//        List << "Go Food " << "Walk the " << "Sign Something";
-//    }
-//    // Make data
-//
-//    // Populate our model
-//    model->setStringList(List);
-//
-//    ui->listView->setModel(model);
-//
-//    qDebug () << "Button clicked";
+void MainWindow::handleSelectionChanged(const QItemSelection& selection)
+{
+    vector<Task *> tasks = MainWindow::currentUser->getTasks(MainWindow::database.get());
+    int x = selection.indexes().value(0).row();
+    string tempDesc = tasks[x]->getDescription()+"\n\n\n Date Created:"+tasks[x]->getCreatedAt();
+    ui->descText->setText(tempDesc.c_str());
+
 }
+
 
 void MainWindow::onButtonClick() {
     TaskWindow *wdg = new TaskWindow;

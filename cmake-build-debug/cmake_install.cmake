@@ -1,4 +1,4 @@
-# Install script for directory: /Users/dawsonheide/CLionProjects/3112-Project
+# Install script for directory: /Users/alexonghena/Documents/workspace/c++/3112-Project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/dawsonheide/CLionProjects/3112-Project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/alexonghena/Documents/workspace/c++/3112-Project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

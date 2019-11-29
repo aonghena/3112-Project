@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QDateEdit>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -37,15 +36,12 @@ public:
     QSpacerItem *horizontalSpacer_2;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_3;
-    QLineEdit *lineEdit;
+    QLineEdit *title;
     QHBoxLayout *horizontalLayout_8;
     QLabel *label_5;
-    QSpinBox *spinBox;
+    QSpinBox *priority;
     QLabel *label_4;
-    QTextEdit *textEdit;
-    QHBoxLayout *horizontalLayout_5;
-    QLabel *label_2;
-    QDateEdit *dateEdit;
+    QTextEdit *description;
     QHBoxLayout *horizontalLayout_7;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *pushButton;
@@ -93,10 +89,10 @@ public:
 
         horizontalLayout_4->addWidget(label_3);
 
-        lineEdit = new QLineEdit(TaskWindow);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        title = new QLineEdit(TaskWindow);
+        title->setObjectName(QString::fromUtf8("title"));
 
-        horizontalLayout_4->addWidget(lineEdit);
+        horizontalLayout_4->addWidget(title);
 
 
         verticalLayout->addLayout(horizontalLayout_4);
@@ -109,11 +105,11 @@ public:
 
         horizontalLayout_8->addWidget(label_5);
 
-        spinBox = new QSpinBox(TaskWindow);
-        spinBox->setObjectName(QString::fromUtf8("spinBox"));
-        spinBox->setMaximum(10);
+        priority = new QSpinBox(TaskWindow);
+        priority->setObjectName(QString::fromUtf8("priority"));
+        priority->setMaximum(10);
 
-        horizontalLayout_8->addWidget(spinBox);
+        horizontalLayout_8->addWidget(priority);
 
 
         verticalLayout->addLayout(horizontalLayout_8);
@@ -124,27 +120,10 @@ public:
 
         verticalLayout->addWidget(label_4);
 
-        textEdit = new QTextEdit(TaskWindow);
-        textEdit->setObjectName(QString::fromUtf8("textEdit"));
+        description = new QTextEdit(TaskWindow);
+        description->setObjectName(QString::fromUtf8("description"));
 
-        verticalLayout->addWidget(textEdit);
-
-        horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setSpacing(6);
-        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
-        label_2 = new QLabel(TaskWindow);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-
-        horizontalLayout_5->addWidget(label_2);
-
-        dateEdit = new QDateEdit(TaskWindow);
-        dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
-        dateEdit->setMinimumDateTime(QDateTime(QDate(2019, 11, 18), QTime(0, 0, 0)));
-
-        horizontalLayout_5->addWidget(dateEdit);
-
-
-        verticalLayout->addLayout(horizontalLayout_5);
+        verticalLayout->addWidget(description);
 
 
         gridLayout->addLayout(verticalLayout, 0, 0, 1, 1);
@@ -179,12 +158,11 @@ public:
 
     void retranslateUi(QWidget *TaskWindow)
     {
-        TaskWindow->setWindowTitle(QApplication::translate("TaskWindow", "Todo", nullptr));
+        TaskWindow->setWindowTitle(QApplication::translate("TaskWindow", "Todo Task Manager ", nullptr));
         label->setText(QApplication::translate("TaskWindow", "Task Input", nullptr));
         label_3->setText(QApplication::translate("TaskWindow", "Task Name ", nullptr));
         label_5->setText(QApplication::translate("TaskWindow", "Urgent (0 = not urgent)", nullptr));
-        label_4->setText(QApplication::translate("TaskWindow", "Task Info", nullptr));
-        label_2->setText(QApplication::translate("TaskWindow", "Date", nullptr));
+        label_4->setText(QApplication::translate("TaskWindow", "Description", nullptr));
         pushButton->setText(QApplication::translate("TaskWindow", "Submit", nullptr));
     } // retranslateUi
 
