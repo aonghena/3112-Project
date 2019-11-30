@@ -225,6 +225,24 @@ public:
         }
     }
 
+    void deleteTask(int id) {
+
+        cout << "delete task" << endl;
+        string qry;
+
+        qry = "DELETE FROM Task WHERE id=" + to_string(id) + ";";
+
+
+        cout << "qry: " << qry << endl;
+
+        char *messageError;
+        int exit = sqlite3_exec(this->db, qry.c_str(), nullptr, nullptr, &messageError);
+
+        if (exit != SQLITE_OK) {
+            std::cerr << messageError << std::endl;
+            sqlite3_free(messageError);
+        }
+    }
 };
 
 

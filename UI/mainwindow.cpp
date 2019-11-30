@@ -16,6 +16,17 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    refreshList();
+
+    QObject::connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(onButtonClick()));
+    QObject::connect(ui->commandLinkButton, SIGNAL(clicked()), this, SLOT(completeTask()));
+    connect(ui->titleListView->selectionModel(),
+            SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
+            this, SLOT(handleSelectionChanged(QItemSelection)));
+}
+
+void MainWindow::refreshList(){
+
     ui->nameLabel->setText(MainWindow::currentUser->getName().c_str());
 
     titleModel = new QStringListModel(this);
@@ -23,38 +34,40 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Make data
     QStringList titleList;
-    QStringList descList;
 
     vector<Task *> tasks = MainWindow::currentUser->getTasks(MainWindow::database.get());
 //    cout << tasks.size() << endl;
     for(int x = 0; x < tasks.size(); x++) {
-        titleList += tasks[x]->getTitle().c_str();
-        descList += tasks[x]->getDescription().c_str();
+        if(tasks[x]->isCompleted() == 0){
+            titleList += tasks[x]->getTitle().c_str();
+        }
     }
-
     // Populate our model
-    if(!(titleList.empty() || descList.empty())) {
+    if(!(titleList.empty())) {
         titleModel->setStringList(titleList);
-        descModel->setStringList(descList);
     }
-
     ui->titleListView->setModel(titleModel);
-
 
     if(tasks.size() != 0) {
         string tempDesc = tasks[0]->getDescription()+"\n\n\n Date Created:"+tasks[0]->getCreatedAt();
         ui->descText->setText(tempDesc.c_str());
+    }else{
+        ui->descText->setText("");
     }
-    QObject::connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(onButtonClick()));
-    QObject::connect(ui->commandLinkButton, SIGNAL(clicked()), this, SLOT(deleteTask()));
+};
+
+
+void MainWindow::completeTask(){
+    vector<Task *> tasks = MainWindow::currentUser->getTasks(MainWindow::database.get());
+    int x = ui->titleListView->selectionModel()->currentIndex().row();
+    if(x != -1) {
+        cout << tasks[x]->getId() << endl;
+        database->deleteTask(tasks[x]->getId());
+        refreshList();
+    }
     connect(ui->titleListView->selectionModel(),
             SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
             this, SLOT(handleSelectionChanged(QItemSelection)));
-}
-
-void MainWindow::deleteTask(){
-    //todo remove or create task
-
 }
 
 

@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[7];
-    char stringdata0[85];
+    char stringdata0[87];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,13 +34,13 @@ static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
 QT_MOC_LITERAL(1, 11, 13), // "onButtonClick"
 QT_MOC_LITERAL(2, 25, 0), // ""
-QT_MOC_LITERAL(3, 26, 10), // "deleteTask"
-QT_MOC_LITERAL(4, 37, 22), // "handleSelectionChanged"
-QT_MOC_LITERAL(5, 60, 14), // "QItemSelection"
-QT_MOC_LITERAL(6, 75, 9) // "selection"
+QT_MOC_LITERAL(3, 26, 12), // "completeTask"
+QT_MOC_LITERAL(4, 39, 22), // "handleSelectionChanged"
+QT_MOC_LITERAL(5, 62, 14), // "QItemSelection"
+QT_MOC_LITERAL(6, 77, 9) // "selection"
 
     },
-    "MainWindow\0onButtonClick\0\0deleteTask\0"
+    "MainWindow\0onButtonClick\0\0completeTask\0"
     "handleSelectionChanged\0QItemSelection\0"
     "selection"
 };
@@ -79,7 +79,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->onButtonClick(); break;
-        case 1: _t->deleteTask(); break;
+        case 1: _t->completeTask(); break;
         case 2: _t->handleSelectionChanged((*reinterpret_cast< const QItemSelection(*)>(_a[1]))); break;
         default: ;
         }

@@ -24,11 +24,12 @@ public:
     static shared_ptr<User> currentUser;
 
     explicit MainWindow(QWidget *parent = 0);
+    void refreshList();
     ~MainWindow();
 
 public slots:
     void onButtonClick();
-    void deleteTask();
+    void completeTask();
     void handleSelectionChanged(const QItemSelection& selection);
 
 private:
