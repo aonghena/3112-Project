@@ -35,7 +35,8 @@ void TaskWindow::onButtonClick() {
 //        Task *task = new Task(title, description, MainWindow::currentUser->getId());
 //        task->save(database);
 //    }
-
+//
+    cout << "b4 cal" << endl;
     MainWindow::currentUser->createTask(database, title, description, priority);
     MainWindow *wdg = new MainWindow();
     wdg->show();

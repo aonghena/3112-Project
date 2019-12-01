@@ -170,12 +170,14 @@ public:
     int createTask(string &title, string &description, int user_id, string created_at, int priority = 0) {
 
         string qry;
+        cout << "HERER PLS";
         if (priority != 0) {
             qry = "INSERT INTO Task (title, description, user_id, created_at, priority)"
-                  " VALUES(\"" + title + "\",\"" + description + "\","
-                  + to_string(user_id) + ","
-                  + created_at + ","
-                  + to_string(priority) + ");";
+                  " VALUES(\"" + title + "\",\""
+                  + description + "\",\""
+                  + to_string(user_id) + "\",\""
+                  + created_at + "\",\""
+                  + to_string(priority) + "\");";
         } else {
             qry = "INSERT INTO Task (title, description, created_at, user_id)"
                   " VALUES(\"" + title + "\",\""

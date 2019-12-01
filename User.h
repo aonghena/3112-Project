@@ -72,26 +72,35 @@ public:
     }
 
     vector<Task *> getTasks(Database *database) {
-
         vector<Task *> tasks;
+        vector<TaskData *> data = database->getTaskData();
+
+        for(auto & x: data) {
+            if(x->user_id == this->id) {
+                if(x->priority == 0) {
+                    tasks.push_back(new Task(x->id, x->title, x->description, x->user_id, x->completed, x->created_at));
+                }
+            }
+        }
+        return tasks;
+    }
+
+    vector<UrgentTask *> getUTasks(Database *database) {
+
+        vector<UrgentTask *> tasks;
         vector<TaskData *> data = database->getTaskData();
 
         for(auto & x: data) {
             if(x->user_id == this->id) {
                 if(x->priority > 0) {
                     tasks.push_back(new UrgentTask(x->id, x->title, x->description, x->user_id, x->completed, x->priority, x->created_at));
-                } else {
-                    tasks.push_back(new Task(x->id, x->title, x->description, x->user_id, x->completed, x->created_at));
                 }
             }
         }
-
         return tasks;
-
     }
 
     void createTask(Database *database, string title, string description, int priority = 0) {
-
         if(priority > 0) {
             UrgentTask *task = new UrgentTask(title, description, this->id, priority);
             task->save(database);
