@@ -10,6 +10,11 @@
 #include <QtCore>
 #include <QInputDialog>
 
+/**
+ * Task Window
+ * task window constructor
+ * @param parent - parent widget
+ */
 TaskWindow::TaskWindow(QWidget *parent) :
         QWidget(parent),
         ui(new Ui::TaskWindow)
@@ -19,6 +24,10 @@ TaskWindow::TaskWindow(QWidget *parent) :
     QObject::connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(onButtonClick()));
 }
 
+/**
+ * onButtonClick()
+ * adds created task to database and re-direct to main window
+ */
 void TaskWindow::onButtonClick() {
 
     bool pass = true;
@@ -51,7 +60,10 @@ void TaskWindow::onButtonClick() {
     }
 };
 
-
+/**
+ * taskWindow
+ * de-constructor
+ */
 TaskWindow::~TaskWindow()
 {
     delete ui;

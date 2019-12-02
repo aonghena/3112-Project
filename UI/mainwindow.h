@@ -28,7 +28,7 @@ public:
     ~MainWindow();
 
 public slots:
-    void onButtonClick();
+    void onTaskButton();
     void completeTask();
     void handleSelectionChanged(const QItemSelection& selection);
 

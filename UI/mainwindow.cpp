@@ -10,21 +10,30 @@
 shared_ptr<Database> MainWindow::database (new Database());
 shared_ptr<User> MainWindow::currentUser (nullptr);
 
+/**
+ * MainWindow
+ * Constructor for the mainwindow
+ * @param parent - parent widget
+ */
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
+    //shows list
     refreshList();
 
-    QObject::connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(onButtonClick()));
+    //button listeners
+    QObject::connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(onTaskButton()));
     QObject::connect(ui->commandLinkButton, SIGNAL(clicked()), this, SLOT(completeTask()));
     connect(ui->titleListView->selectionModel(),
             SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
             this, SLOT(handleSelectionChanged(QItemSelection)));
 }
-
+/**
+ * refreshList
+ * refresh the list when a change is made
+ */
 void MainWindow::refreshList(){
 
     ui->nameLabel->setText(MainWindow::currentUser->getName().c_str());
@@ -67,7 +76,10 @@ void MainWindow::refreshList(){
 
 };
 
-
+/**
+ * completeTask
+ * function to update the database to remove the completed task
+ */
 void MainWindow::completeTask(){
     vector<Task *> tasks = MainWindow::currentUser->getTasks(MainWindow::database.get());
     vector<UrgentTask *> Utasks = MainWindow::currentUser->getUTasks(MainWindow::database.get());
@@ -88,7 +100,11 @@ void MainWindow::completeTask(){
             this, SLOT(handleSelectionChanged(QItemSelection)));
 }
 
-
+/**
+ * handelSelectionChanged
+ * Updates the description window to reflect the task the User selected
+ * @param selection - The list input that the user selects
+ */
 void MainWindow::handleSelectionChanged(const QItemSelection& selection)
 {
     vector<Task *> tasks = MainWindow::currentUser->getTasks(MainWindow::database.get());
@@ -109,8 +125,11 @@ void MainWindow::handleSelectionChanged(const QItemSelection& selection)
 
 }
 
-
-void MainWindow::onButtonClick() {
+/**
+ * onTaskButton
+ * When the user clicks the add task button
+ */
+void MainWindow::onTaskButton() {
     vector<Task *> tasks = MainWindow::currentUser->getTasks(MainWindow::database.get());
     vector<UrgentTask *> Utasks = MainWindow::currentUser->getUTasks(MainWindow::database.get());
     if(Utasks.size() + tasks.size() >= 999){
@@ -125,6 +144,9 @@ void MainWindow::onButtonClick() {
     }
 };
 
+/**
+ * deconstructor
+ */
 MainWindow::~MainWindow()
 {
     delete ui;

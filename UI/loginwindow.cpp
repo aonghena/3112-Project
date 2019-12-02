@@ -12,6 +12,11 @@
 #include <QInputDialog>
 #include <QMessageBox>
 
+/**
+ * LoginWindow
+ * Constructor for the login window
+ * @param parent - parent window
+ */
 LoginWindow::LoginWindow(QWidget *parent):
         QWidget(parent),
         ui(new Ui::LoginWindow)
@@ -21,7 +26,10 @@ LoginWindow::LoginWindow(QWidget *parent):
     QObject::connect(ui->pushButton_2, SIGNAL(clicked()), this, SLOT(onRegButtonClick()));
 
 }
-
+/**
+ * onSignButtonClick()
+ * sign in button re-direct
+ */
 void LoginWindow::onSignButtonClick() {
     bool pass = false;
 
@@ -40,10 +48,6 @@ void LoginWindow::onSignButtonClick() {
                 tr("TODO"),
                 tr("Invalid email or password.") );
     }
-    ///
-    ///Database verification here
-    ///
-
 
     if(pass && MainWindow::currentUser != nullptr){
         MainWindow *wdg = new MainWindow();
@@ -53,13 +57,20 @@ void LoginWindow::onSignButtonClick() {
 
 };
 
+/**
+ * onregButtonClick()
+ * re-directs to register window
+ */
 void LoginWindow::onRegButtonClick() {
     RegisterWindow *wdg = new RegisterWindow;
     wdg->show();
     hide();
 };
 
-
+/**
+ * LoginWindow
+ * de-constructor
+ */
 LoginWindow::~LoginWindow()
 {
     delete ui;

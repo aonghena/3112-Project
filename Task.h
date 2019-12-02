@@ -23,14 +23,36 @@ protected:
     string created_at;
 
 public:
-
+    /**
+     * Task
+     * Constructor
+     * @param title - title of task
+     * @param description -description of task
+     * @param userId - user id
+     */
     Task(const string &title, const string &description, int userId) {
         this->title = title;
         this->description = description;
         this->user_id = userId;
-        this->created_at = currentDateTime() + "";
+        time_t t ;
+        struct tm *tmp ;
+        char MY_TIME[50];
+        time( &t );
+        tmp = localtime( &t );
+        strftime(MY_TIME, sizeof(MY_TIME), "%D %R", tmp);
+        this->created_at = MY_TIME;
     }
 
+    /**
+     * Task
+     * Constructor
+     * @param id - task id
+     * @param title - title of task
+     * @param description - description of task
+     * @param userId - user Id task owner
+     * @param completed - completed or not
+     * @param created_at - created time
+     */
     Task(int id, const string &title, const string &description, int userId, int completed, string created_at) {
         this->id = id;
         this->title = title;
@@ -39,31 +61,52 @@ public:
         this->completed = completed;
         this->created_at = created_at;
     }
-
+    /**
+     * getId
+     * @return id
+     */
     int getId() const {
         return id;
     }
-
+    /**
+     * getCreatedAt
+     * @return  created_at
+     */
     const string &getCreatedAt() const {
         return created_at;
     }
-
+    /**
+     * getTitle
+     * @return title
+     */
     const string &getTitle() const {
         return title;
     }
-
+    /**
+     * setTitle
+     * @param title - task title
+     */
     void setTitle(const string &title) {
         Task::title = title;
     }
-
+    /**
+     * getDescription
+     * @return description
+     */
     const string &getDescription() const {
         return description;
     }
-
+    /**
+     * setDescription
+     * @param description - task desc
+     */
     void setDescription(const string &description) {
         Task::description = description;
     }
-
+    /**
+     * getUserId
+     * @return userId
+     */
     int getUserId() const {
         return user_id;
     }
@@ -71,15 +114,25 @@ public:
     void setUserId(int userId) {
         user_id = userId;
     }
-
+    /**
+     * isCompleted
+     * @return if completed
+     */
     int isCompleted() const {
         return completed;
     }
-
+    /**
+     * complete
+     * setTask to be complete or not
+     */
     void complete() {
         this->completed = !this->completed;
     }
-
+    /**
+     * save
+     * saves task to database
+     * @param database
+     */
     virtual void save(Database *database) {
         if(this->id == 0) {
             this->id = database->createTask(this->title, this->description, this->user_id, this->created_at);
@@ -87,7 +140,11 @@ public:
             database->updateTask(this->id, this->title, this->description, this->completed);
         }
     }
-
+    /**
+     * getTasks
+     * @param database
+     * @return vector of normal tasks
+     */
     static vector<Task*> getTasks(Database *database) {
 
         vector<Task*> tasks;
@@ -100,15 +157,6 @@ public:
 
         return tasks;
 
-    }
-
-    const string currentDateTime() {
-        time_t     now = time(0);
-        struct tm  tstruct;
-        char       buf[80];
-        tstruct = *localtime(&now);
-        strftime(buf, sizeof(buf), "%Y-%m-%d.%X", &tstruct);
-        return buf;
     }
 
 };

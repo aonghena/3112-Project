@@ -12,6 +12,11 @@
 #include <QInputDialog>
 #include <QMessageBox>
 
+/**
+ * RegisterWindow
+ * register window constructor
+ * @param parent - parent widget
+ */
 RegisterWindow::RegisterWindow(QWidget *parent):
         QWidget(parent),
         ui(new Ui::RegisterWindow)
@@ -22,12 +27,20 @@ RegisterWindow::RegisterWindow(QWidget *parent):
 
 }
 
+/**
+ * onLoginButtonClick
+ * function to go to login window
+ */
 void RegisterWindow::onLoginButtonClick() {
     LoginWindow *wdg = new LoginWindow;
     wdg->show();
     hide();
 };
 
+/**
+ * onRegButtonClick
+ * adds the user to the database and dre-direct to main window
+ */
 void RegisterWindow::onRegButtonClick() {
 
     bool pass = false;
@@ -62,7 +75,9 @@ void RegisterWindow::onRegButtonClick() {
 
 };
 
-
+/**
+ * de-constructor
+ */
 RegisterWindow::~RegisterWindow()
 {
     delete ui;
