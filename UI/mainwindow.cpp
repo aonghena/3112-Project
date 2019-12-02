@@ -57,13 +57,14 @@ void MainWindow::refreshList(){
 
     string tempDesc = "";
     if(Utasks.size() != 0) {
-        tempDesc = Utasks[0]->getDescription()+"\n\nUrgency:" + std::to_string(Utasks[0]->getPriority()) +"\nDate Created:"+Utasks[0]->getCreatedAt();
+        tempDesc = Utasks[0]->getDescription()+"\n\nUrgency Level:" + std::to_string(Utasks[0]->getPriority()) +"\nDate Created:"+Utasks[0]->getCreatedAt();
     }else  if(tasks.size() != 0) {
         tempDesc = tasks[0]->getDescription() + "\n\n\n Date Created:" + tasks[0]->getCreatedAt();
     }
     ui->descText->setText(tempDesc.c_str());
 
     ui->titleListView->setModel(titleModel);
+
 };
 
 
@@ -99,7 +100,7 @@ void MainWindow::handleSelectionChanged(const QItemSelection& selection)
     string tempDesc = "";
     //decides if an urgent task was clicked or not
     if(x <= m-1){
-        tempDesc = Utasks[x]->getDescription()+"\n\nUrgency:" + std::to_string(Utasks[x]->getPriority()) +"\nDate Created:"+Utasks[x]->getCreatedAt();
+        tempDesc = Utasks[x]->getDescription()+"\n\nUrgency Level: " + std::to_string(Utasks[x]->getPriority()) +"\nDate Created:"+Utasks[x]->getCreatedAt();
     }else{
         tempDesc = tasks[x-m]->getDescription()+"\n\n\nDate Created:"+tasks[x-m]->getCreatedAt();
     }
@@ -110,9 +111,18 @@ void MainWindow::handleSelectionChanged(const QItemSelection& selection)
 
 
 void MainWindow::onButtonClick() {
-    TaskWindow *wdg = new TaskWindow;
-    wdg->show();
-    hide();
+    vector<Task *> tasks = MainWindow::currentUser->getTasks(MainWindow::database.get());
+    vector<UrgentTask *> Utasks = MainWindow::currentUser->getUTasks(MainWindow::database.get());
+    if(Utasks.size() + tasks.size() >= 999){
+        QMessageBox::information(
+                this,
+                tr("TODO"),
+                tr("You can't have more than 999 Tasks") );
+    }else {
+        TaskWindow *wdg = new TaskWindow;
+        wdg->show();
+        hide();
+    }
 };
 
 MainWindow::~MainWindow()

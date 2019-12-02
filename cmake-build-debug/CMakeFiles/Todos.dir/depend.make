@@ -20,8 +20,10 @@ CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: /Users/alexonghena/Qt
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtGui.framework/QtGui
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QInputDialog
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMainWindow
+CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMessageBox
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qinputdialog.h
 CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h
+CMakeFiles/Todos.dir/Todos_autogen/mocs_compilation.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h
 
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: ../Database.h
 CMakeFiles/Todos.dir/UI/loginwindow.cpp.o: ../Task.h
@@ -78,10 +80,12 @@ CMakeFiles/Todos.dir/main.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtGui
 CMakeFiles/Todos.dir/main.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QApplication
 CMakeFiles/Todos.dir/main.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QInputDialog
 CMakeFiles/Todos.dir/main.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMainWindow
+CMakeFiles/Todos.dir/main.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMessageBox
 CMakeFiles/Todos.dir/main.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QPushButton
 CMakeFiles/Todos.dir/main.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
 CMakeFiles/Todos.dir/main.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qinputdialog.h
 CMakeFiles/Todos.dir/main.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h
+CMakeFiles/Todos.dir/main.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h
 CMakeFiles/Todos.dir/main.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h
 
 CMakeFiles/Todos.dir/ui/mainwindow.cpp.o: ../Database.h
@@ -97,8 +101,10 @@ CMakeFiles/Todos.dir/ui/mainwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/
 CMakeFiles/Todos.dir/ui/mainwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtGui.framework/QtGui
 CMakeFiles/Todos.dir/ui/mainwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QInputDialog
 CMakeFiles/Todos.dir/ui/mainwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMainWindow
+CMakeFiles/Todos.dir/ui/mainwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMessageBox
 CMakeFiles/Todos.dir/ui/mainwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qinputdialog.h
 CMakeFiles/Todos.dir/ui/mainwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h
+CMakeFiles/Todos.dir/ui/mainwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h
 CMakeFiles/Todos.dir/ui/mainwindow.cpp.o: Todos_autogen/include/ui_mainwindow.h
 
 CMakeFiles/Todos.dir/ui/taskwindow.cpp.o: ../Database.h
@@ -114,7 +120,9 @@ CMakeFiles/Todos.dir/ui/taskwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/
 CMakeFiles/Todos.dir/ui/taskwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtGui.framework/QtGui
 CMakeFiles/Todos.dir/ui/taskwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QInputDialog
 CMakeFiles/Todos.dir/ui/taskwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMainWindow
+CMakeFiles/Todos.dir/ui/taskwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMessageBox
 CMakeFiles/Todos.dir/ui/taskwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qinputdialog.h
 CMakeFiles/Todos.dir/ui/taskwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h
+CMakeFiles/Todos.dir/ui/taskwindow.cpp.o: /Users/alexonghena/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h
 CMakeFiles/Todos.dir/ui/taskwindow.cpp.o: Todos_autogen/include/ui_taskwindow.h
 

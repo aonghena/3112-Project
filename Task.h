@@ -28,13 +28,7 @@ public:
         this->title = title;
         this->description = description;
         this->user_id = userId;
-        time_t t ;
-        struct tm *tmp ;
-        char MY_TIME[50];
-        time( &t );
-        tmp = localtime( &t );
-        strftime(MY_TIME, sizeof(MY_TIME), "%D %R", tmp);
-        this->created_at = MY_TIME;
+        this->created_at = currentDateTime() + "";
     }
 
     Task(int id, const string &title, const string &description, int userId, int completed, string created_at) {
@@ -106,6 +100,15 @@ public:
 
         return tasks;
 
+    }
+
+    const string currentDateTime() {
+        time_t     now = time(0);
+        struct tm  tstruct;
+        char       buf[80];
+        tstruct = *localtime(&now);
+        strftime(buf, sizeof(buf), "%Y-%m-%d.%X", &tstruct);
+        return buf;
     }
 
 };

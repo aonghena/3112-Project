@@ -11,7 +11,7 @@
 #include <QtGui>
 #include <QtCore>
 #include <QInputDialog>
-
+#include <QMessageBox>
 namespace Ui {
     class TaskWindow;
 }

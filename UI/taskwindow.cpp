@@ -21,26 +21,34 @@ TaskWindow::TaskWindow(QWidget *parent) :
 
 void TaskWindow::onButtonClick() {
 
+    bool pass = true;
     string title = ui->title->text().toStdString();
     string description = ui->description->toPlainText().toStdString();
     int priority = ui->priority->cleanText().toInt();
 
     cout << title << description << priority << endl;
 
-    Database *database = MainWindow::database.get();
-//    if(priority > 0) {
-//        UrgentTask *task = new UrgentTask(title, description, MainWindow::currentUser->getId(), priority);
-//        task->save(database);
-//    } else {
-//        Task *task = new Task(title, description, MainWindow::currentUser->getId());
-//        task->save(database);
-//    }
-//
-    cout << "b4 cal" << endl;
-    MainWindow::currentUser->createTask(database, title, description, priority);
-    MainWindow *wdg = new MainWindow();
-    wdg->show();
-    hide();
+    if(title == "" || description == ""){
+        pass = false;
+        QMessageBox::information(
+                this,
+                tr("TODO"),
+                tr("Invalid title or description") );
+    }else if( title.length() > 200 || description.length() > 10000){
+        pass = false;
+        QMessageBox::information(
+                this,
+                tr("TODO"),
+                tr("Invalid Length.") );
+    }
+
+    if(pass) {
+        Database *database = MainWindow::database.get();
+        MainWindow::currentUser->createTask(database, title, description, priority);
+        MainWindow *wdg = new MainWindow();
+        wdg->show();
+        hide();
+    }
 };
 
 

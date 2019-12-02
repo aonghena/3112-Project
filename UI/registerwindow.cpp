@@ -40,18 +40,18 @@ void RegisterWindow::onRegButtonClick() {
     Database *database = MainWindow::database.get();
 
     if(!(email == "" || password == "" || name == "")
+        && (email.length() < 400 || password.length() < 400  || name.length() < 400 )
         && User::getByEmail(database, email) == nullptr){
         pass = true;
         user = new User(name, email, password);
         user->save(database);
         MainWindow::currentUser = shared_ptr<User> (user);
-    }else{
+    } else{
         QMessageBox::information(
                 this,
                 tr("TODO"),
                 tr("Invalid INFO.") );
     }
-
 
     if(pass && MainWindow::currentUser != nullptr){
         //add to the database here
