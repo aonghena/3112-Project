@@ -1,0 +1,222 @@
+\hypertarget{class_task}{}\doxysection{Task Class Reference}
+\label{class_task}\index{Task@{Task}}
+Inheritance diagram for Task\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_task}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_task_ab1f2a5fd0f4a7b01c0c372f659db36d5}{Task}} (const string \&title, const string \&description, int user\+Id)
+\item 
+\mbox{\hyperlink{class_task_ae2e0d85940c489f5e2a88d8efdc16765}{Task}} (int id, const string \&title, const string \&description, int user\+Id, int completed, string created\+\_\+at)
+\item 
+int \mbox{\hyperlink{class_task_abf76ea8bb7d99718c0ae0d231fd4dc52}{get\+Id}} () const
+\item 
+const string \& \mbox{\hyperlink{class_task_a9c7b9389fc2f2101f8d7e770cbaab5c2}{get\+Created\+At}} () const
+\item 
+const string \& \mbox{\hyperlink{class_task_ade3b8d946de5802d498e91f6415be9aa}{get\+Title}} () const
+\item 
+void \mbox{\hyperlink{class_task_ab176b9fb7eeeb2cc75f6ed53ec99165b}{set\+Title}} (const string \&title)
+\item 
+const string \& \mbox{\hyperlink{class_task_a28e18c3187f4fea8c82f90f0bb386414}{get\+Description}} () const
+\item 
+void \mbox{\hyperlink{class_task_a4845777e6acdba42a3871ee5a17f2e03}{set\+Description}} (const string \&description)
+\item 
+int \mbox{\hyperlink{class_task_ae49322aa2d75d0959e3ed9761d2e65b6}{get\+User\+Id}} () const
+\item 
+\mbox{\Hypertarget{class_task_a931215a2e2d8e986fc5cf030e0b5e921}\label{class_task_a931215a2e2d8e986fc5cf030e0b5e921}} 
+void {\bfseries set\+User\+Id} (int user\+Id)
+\item 
+int \mbox{\hyperlink{class_task_a39d65a277af7686c8b94141c0d771234}{is\+Completed}} () const
+\item 
+void \mbox{\hyperlink{class_task_a99921df21eb9f8f04a8816f045ac6206}{complete}} ()
+\item 
+virtual void \mbox{\hyperlink{class_task_a8066c3bdd517f1c77a1996167d13a986}{save}} (\mbox{\hyperlink{class_database}{Database}} $\ast$database)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_task}{Task}} $\ast$ $>$ \mbox{\hyperlink{class_task_a02b2273ad8491acb9ab4f91fdf919f11}{get\+Tasks}} (\mbox{\hyperlink{class_database}{Database}} $\ast$database)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_task_a1bdc8139dd647f9701e9f43e588749d7}\label{class_task_a1bdc8139dd647f9701e9f43e588749d7}} 
+int {\bfseries id} = 0
+\item 
+\mbox{\Hypertarget{class_task_ae964a3125d6f1cb36654acda820b5991}\label{class_task_ae964a3125d6f1cb36654acda820b5991}} 
+string {\bfseries title}
+\item 
+\mbox{\Hypertarget{class_task_a7a3c12f42d34fb8439ebee5b5877f886}\label{class_task_a7a3c12f42d34fb8439ebee5b5877f886}} 
+string {\bfseries description}
+\item 
+\mbox{\Hypertarget{class_task_af274fa64730e1ce8e98b433c63430a66}\label{class_task_af274fa64730e1ce8e98b433c63430a66}} 
+int {\bfseries user\+\_\+id}
+\item 
+\mbox{\Hypertarget{class_task_ae919e1b90d8e5be16da116d4f0f95ad7}\label{class_task_ae919e1b90d8e5be16da116d4f0f95ad7}} 
+int {\bfseries completed} = 0
+\item 
+\mbox{\Hypertarget{class_task_a7399b859c4328a70912299a985068c2f}\label{class_task_a7399b859c4328a70912299a985068c2f}} 
+string {\bfseries created\+\_\+at}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_task_ab1f2a5fd0f4a7b01c0c372f659db36d5}\label{class_task_ab1f2a5fd0f4a7b01c0c372f659db36d5}} 
+\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{Task()}{Task()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Task\+::\+Task (\begin{DoxyParamCaption}\item[{const string \&}]{title,  }\item[{const string \&}]{description,  }\item[{int}]{user\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{class_task}{Task}} Constructor 
+\begin{DoxyParams}{Parameters}
+{\em title} & -\/ title of task \\
+\hline
+{\em description} & -\/description of task \\
+\hline
+{\em user\+Id} & -\/ user id \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_task_ae2e0d85940c489f5e2a88d8efdc16765}\label{class_task_ae2e0d85940c489f5e2a88d8efdc16765}} 
+\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{Task()}{Task()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Task\+::\+Task (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{const string \&}]{title,  }\item[{const string \&}]{description,  }\item[{int}]{user\+Id,  }\item[{int}]{completed,  }\item[{string}]{created\+\_\+at }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{class_task}{Task}} Constructor 
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ task id \\
+\hline
+{\em title} & -\/ title of task \\
+\hline
+{\em description} & -\/ description of task \\
+\hline
+{\em user\+Id} & -\/ user Id task owner \\
+\hline
+{\em completed} & -\/ completed or not \\
+\hline
+{\em created\+\_\+at} & -\/ created time \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_task_a99921df21eb9f8f04a8816f045ac6206}\label{class_task_a99921df21eb9f8f04a8816f045ac6206}} 
+\index{Task@{Task}!complete@{complete}}
+\index{complete@{complete}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{complete()}{complete()}}
+{\footnotesize\ttfamily void Task\+::complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+complete set\+Task to be complete or not \mbox{\Hypertarget{class_task_a9c7b9389fc2f2101f8d7e770cbaab5c2}\label{class_task_a9c7b9389fc2f2101f8d7e770cbaab5c2}} 
+\index{Task@{Task}!getCreatedAt@{getCreatedAt}}
+\index{getCreatedAt@{getCreatedAt}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getCreatedAt()}{getCreatedAt()}}
+{\footnotesize\ttfamily const string\& Task\+::get\+Created\+At (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get\+Created\+At \begin{DoxyReturn}{Returns}
+created\+\_\+at 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_task_a28e18c3187f4fea8c82f90f0bb386414}\label{class_task_a28e18c3187f4fea8c82f90f0bb386414}} 
+\index{Task@{Task}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily const string\& Task\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get\+Description \begin{DoxyReturn}{Returns}
+description 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_task_abf76ea8bb7d99718c0ae0d231fd4dc52}\label{class_task_abf76ea8bb7d99718c0ae0d231fd4dc52}} 
+\index{Task@{Task}!getId@{getId}}
+\index{getId@{getId}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Task\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get\+Id \begin{DoxyReturn}{Returns}
+id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_task_a02b2273ad8491acb9ab4f91fdf919f11}\label{class_task_a02b2273ad8491acb9ab4f91fdf919f11}} 
+\index{Task@{Task}!getTasks@{getTasks}}
+\index{getTasks@{getTasks}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getTasks()}{getTasks()}}
+{\footnotesize\ttfamily static vector$<$\mbox{\hyperlink{class_task}{Task}}$\ast$$>$ Task\+::get\+Tasks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_database}{Database}} $\ast$}]{database }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+get\+Tasks 
+\begin{DoxyParams}{Parameters}
+{\em database} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of normal tasks 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_task_ade3b8d946de5802d498e91f6415be9aa}\label{class_task_ade3b8d946de5802d498e91f6415be9aa}} 
+\index{Task@{Task}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily const string\& Task\+::get\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get\+Title \begin{DoxyReturn}{Returns}
+title 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_task_ae49322aa2d75d0959e3ed9761d2e65b6}\label{class_task_ae49322aa2d75d0959e3ed9761d2e65b6}} 
+\index{Task@{Task}!getUserId@{getUserId}}
+\index{getUserId@{getUserId}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getUserId()}{getUserId()}}
+{\footnotesize\ttfamily int Task\+::get\+User\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get\+User\+Id \begin{DoxyReturn}{Returns}
+user\+Id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_task_a39d65a277af7686c8b94141c0d771234}\label{class_task_a39d65a277af7686c8b94141c0d771234}} 
+\index{Task@{Task}!isCompleted@{isCompleted}}
+\index{isCompleted@{isCompleted}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{isCompleted()}{isCompleted()}}
+{\footnotesize\ttfamily int Task\+::is\+Completed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+is\+Completed \begin{DoxyReturn}{Returns}
+if completed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_task_a8066c3bdd517f1c77a1996167d13a986}\label{class_task_a8066c3bdd517f1c77a1996167d13a986}} 
+\index{Task@{Task}!save@{save}}
+\index{save@{save}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily virtual void Task\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_database}{Database}} $\ast$}]{database }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+save saves task to database 
+\begin{DoxyParams}{Parameters}
+{\em database} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_urgent_task_aa4b96ebf60baa854e5d7cd20021d487c}{Urgent\+Task}}.
+
+\mbox{\Hypertarget{class_task_a4845777e6acdba42a3871ee5a17f2e03}\label{class_task_a4845777e6acdba42a3871ee5a17f2e03}} 
+\index{Task@{Task}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}}
+{\footnotesize\ttfamily void Task\+::set\+Description (\begin{DoxyParamCaption}\item[{const string \&}]{description }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set\+Description 
+\begin{DoxyParams}{Parameters}
+{\em description} & -\/ task desc \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_task_ab176b9fb7eeeb2cc75f6ed53ec99165b}\label{class_task_ab176b9fb7eeeb2cc75f6ed53ec99165b}} 
+\index{Task@{Task}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily void Task\+::set\+Title (\begin{DoxyParamCaption}\item[{const string \&}]{title }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set\+Title 
+\begin{DoxyParams}{Parameters}
+{\em title} & -\/ task title \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Task.\+h\end{DoxyCompactItemize}

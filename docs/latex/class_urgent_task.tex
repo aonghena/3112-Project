@@ -1,0 +1,108 @@
+\hypertarget{class_urgent_task}{}\doxysection{Urgent\+Task Class Reference}
+\label{class_urgent_task}\index{UrgentTask@{UrgentTask}}
+Inheritance diagram for Urgent\+Task\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_urgent_task}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_urgent_task_a4aa50be0737d4bf1963f950f169c93ca}{Urgent\+Task}} (const string \&title, const string \&description, int user\+Id, int priority)
+\item 
+\mbox{\hyperlink{class_urgent_task_a34130a91756f2e00a48e5a48b4cc7be5}{Urgent\+Task}} (int id, const string \&title, const string \&description, int user\+Id, int completed, int priority, string created\+\_\+at)
+\item 
+int \mbox{\hyperlink{class_urgent_task_ab73f73b111fc62b4a57f430d18b85550}{get\+Priority}} () const
+\item 
+void \mbox{\hyperlink{class_urgent_task_adb44f6622806be8ea95cddfcbb2158cd}{set\+Priority}} (int priority)
+\item 
+void \mbox{\hyperlink{class_urgent_task_aa4b96ebf60baa854e5d7cd20021d487c}{save}} (\mbox{\hyperlink{class_database}{Database}} $\ast$database) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_urgent_task_a4aa50be0737d4bf1963f950f169c93ca}\label{class_urgent_task_a4aa50be0737d4bf1963f950f169c93ca}} 
+\index{UrgentTask@{UrgentTask}!UrgentTask@{UrgentTask}}
+\index{UrgentTask@{UrgentTask}!UrgentTask@{UrgentTask}}
+\doxysubsubsection{\texorpdfstring{UrgentTask()}{UrgentTask()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Urgent\+Task\+::\+Urgent\+Task (\begin{DoxyParamCaption}\item[{const string \&}]{title,  }\item[{const string \&}]{description,  }\item[{int}]{user\+Id,  }\item[{int}]{priority }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{class_urgent_task}{Urgent\+Task}} Constructor 
+\begin{DoxyParams}{Parameters}
+{\em title} & -\/ title of task \\
+\hline
+{\em description} & -\/ description of task \\
+\hline
+{\em user\+Id} & -\/ \mbox{\hyperlink{class_user}{User}} ID of task \\
+\hline
+{\em priority} & -\/ task priority \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_urgent_task_a34130a91756f2e00a48e5a48b4cc7be5}\label{class_urgent_task_a34130a91756f2e00a48e5a48b4cc7be5}} 
+\index{UrgentTask@{UrgentTask}!UrgentTask@{UrgentTask}}
+\index{UrgentTask@{UrgentTask}!UrgentTask@{UrgentTask}}
+\doxysubsubsection{\texorpdfstring{UrgentTask()}{UrgentTask()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Urgent\+Task\+::\+Urgent\+Task (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{const string \&}]{title,  }\item[{const string \&}]{description,  }\item[{int}]{user\+Id,  }\item[{int}]{completed,  }\item[{int}]{priority,  }\item[{string}]{created\+\_\+at }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{class_urgent_task}{Urgent\+Task}} Constructor 
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ Id of the task \\
+\hline
+{\em title} & -\/ title of the task \\
+\hline
+{\em description} & -\/ description of the task \\
+\hline
+{\em user\+Id} & -\/ user\+Id of the user \\
+\hline
+{\em completed} & -\/ If task is completed or not \\
+\hline
+{\em priority} & -\/ priority of task \\
+\hline
+{\em created\+\_\+at} & -\/ date created of task \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_urgent_task_ab73f73b111fc62b4a57f430d18b85550}\label{class_urgent_task_ab73f73b111fc62b4a57f430d18b85550}} 
+\index{UrgentTask@{UrgentTask}!getPriority@{getPriority}}
+\index{getPriority@{getPriority}!UrgentTask@{UrgentTask}}
+\doxysubsubsection{\texorpdfstring{getPriority()}{getPriority()}}
+{\footnotesize\ttfamily int Urgent\+Task\+::get\+Priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get\+Priority \begin{DoxyReturn}{Returns}
+priority -\/ priority 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_urgent_task_aa4b96ebf60baa854e5d7cd20021d487c}\label{class_urgent_task_aa4b96ebf60baa854e5d7cd20021d487c}} 
+\index{UrgentTask@{UrgentTask}!save@{save}}
+\index{save@{save}!UrgentTask@{UrgentTask}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Urgent\+Task\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_database}{Database}} $\ast$}]{database }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+save saves \mbox{\hyperlink{class_urgent_task}{Urgent\+Task}} to database 
+\begin{DoxyParams}{Parameters}
+{\em database} & -\/ database \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_task_a8066c3bdd517f1c77a1996167d13a986}{Task}}.
+
+\mbox{\Hypertarget{class_urgent_task_adb44f6622806be8ea95cddfcbb2158cd}\label{class_urgent_task_adb44f6622806be8ea95cddfcbb2158cd}} 
+\index{UrgentTask@{UrgentTask}!setPriority@{setPriority}}
+\index{setPriority@{setPriority}!UrgentTask@{UrgentTask}}
+\doxysubsubsection{\texorpdfstring{setPriority()}{setPriority()}}
+{\footnotesize\ttfamily void Urgent\+Task\+::set\+Priority (\begin{DoxyParamCaption}\item[{int}]{priority }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set\+Priority 
+\begin{DoxyParams}{Parameters}
+{\em priority} & -\/ priority \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Urgent\+Task.\+h\end{DoxyCompactItemize}
