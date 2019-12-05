@@ -1,0 +1,135 @@
+\hypertarget{class_database}{}\doxysection{Database Class Reference}
+\label{class_database}\index{Database@{Database}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_database_a4703c80e6969d33565ea340f768fdadf}{Database}} ()
+\item 
+vector$<$ \mbox{\hyperlink{struct_user_data}{User\+Data}} $\ast$ $>$ \mbox{\hyperlink{class_database_ad4d627861801906ef664b8c2e8172442}{get\+User\+Data}} (string qry=\char`\"{}\char`\"{})
+\item 
+vector$<$ \mbox{\hyperlink{struct_task_data}{Task\+Data}} $\ast$ $>$ \mbox{\hyperlink{class_database_a758c98b9916c3659ababd245be63cf8c}{get\+Task\+Data}} ()
+\item 
+int \mbox{\hyperlink{class_database_abd73eedc358e2b708da49dbf7a34a03a}{create\+User}} (string \&name, string \&email, string \&password)
+\item 
+int \mbox{\hyperlink{class_database_ae3a2a32f56cf5de44cf8b60669a933bb}{create\+Task}} (string \&title, string \&description, int user\+\_\+id, string created\+\_\+at, int priority=0)
+\item 
+void \mbox{\hyperlink{class_database_ae388df296fa517bf905f8068bce936ed}{update\+Task}} (int id, string \&title, string \&description, int completed, int priority=0)
+\item 
+void \mbox{\hyperlink{class_database_a24f664e22d6160195970468100fa2e0a}{delete\+Task}} (int id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_database_a4703c80e6969d33565ea340f768fdadf}\label{class_database_a4703c80e6969d33565ea340f768fdadf}} 
+\index{Database@{Database}!Database@{Database}}
+\index{Database@{Database}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{Database()}{Database()}}
+{\footnotesize\ttfamily Database\+::\+Database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for a \mbox{\hyperlink{class_database}{Database}} object creates and opens the database file if not already created 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_database_ae3a2a32f56cf5de44cf8b60669a933bb}\label{class_database_ae3a2a32f56cf5de44cf8b60669a933bb}} 
+\index{Database@{Database}!createTask@{createTask}}
+\index{createTask@{createTask}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{createTask()}{createTask()}}
+{\footnotesize\ttfamily int Database\+::create\+Task (\begin{DoxyParamCaption}\item[{string \&}]{title,  }\item[{string \&}]{description,  }\item[{int}]{user\+\_\+id,  }\item[{string}]{created\+\_\+at,  }\item[{int}]{priority = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Takes task information and creates a task in the database
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & \\
+\hline
+{\em description} & \\
+\hline
+{\em user\+\_\+id} & \\
+\hline
+{\em created\+\_\+at} & \\
+\hline
+{\em priority} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new \mbox{\hyperlink{class_task}{Task}} id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_database_abd73eedc358e2b708da49dbf7a34a03a}\label{class_database_abd73eedc358e2b708da49dbf7a34a03a}} 
+\index{Database@{Database}!createUser@{createUser}}
+\index{createUser@{createUser}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{createUser()}{createUser()}}
+{\footnotesize\ttfamily int Database\+::create\+User (\begin{DoxyParamCaption}\item[{string \&}]{name,  }\item[{string \&}]{email,  }\item[{string \&}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Takes user information and creates a user in the database
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em email} & \\
+\hline
+{\em password} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_database_a24f664e22d6160195970468100fa2e0a}\label{class_database_a24f664e22d6160195970468100fa2e0a}} 
+\index{Database@{Database}!deleteTask@{deleteTask}}
+\index{deleteTask@{deleteTask}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{deleteTask()}{deleteTask()}}
+{\footnotesize\ttfamily void Database\+::delete\+Task (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Deletes a task from the database using an sql query 
+\begin{DoxyParams}{Parameters}
+{\em id} & of a task \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_database_a758c98b9916c3659ababd245be63cf8c}\label{class_database_a758c98b9916c3659ababd245be63cf8c}} 
+\index{Database@{Database}!getTaskData@{getTaskData}}
+\index{getTaskData@{getTaskData}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{getTaskData()}{getTaskData()}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{struct_task_data}{Task\+Data}} $\ast$$>$ Database\+::get\+Task\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets all the tasks in the database \begin{DoxyReturn}{Returns}
+a vector of \mbox{\hyperlink{struct_task_data}{Task\+Data}} objects 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_database_ad4d627861801906ef664b8c2e8172442}\label{class_database_ad4d627861801906ef664b8c2e8172442}} 
+\index{Database@{Database}!getUserData@{getUserData}}
+\index{getUserData@{getUserData}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{getUserData()}{getUserData()}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{struct_user_data}{User\+Data}} $\ast$$>$ Database\+::get\+User\+Data (\begin{DoxyParamCaption}\item[{string}]{qry = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets all users from the database 
+\begin{DoxyParams}{Parameters}
+{\em qry} & -\/ a custom qry for the database \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of \mbox{\hyperlink{struct_user_data}{User\+Data}} objects 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_database_ae388df296fa517bf905f8068bce936ed}\label{class_database_ae388df296fa517bf905f8068bce936ed}} 
+\index{Database@{Database}!updateTask@{updateTask}}
+\index{updateTask@{updateTask}!Database@{Database}}
+\doxysubsubsection{\texorpdfstring{updateTask()}{updateTask()}}
+{\footnotesize\ttfamily void Database\+::update\+Task (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{string \&}]{title,  }\item[{string \&}]{description,  }\item[{int}]{completed,  }\item[{int}]{priority = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Updates a task in the database using a sql query
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & of a task \\
+\hline
+{\em title} & of a task \\
+\hline
+{\em description} & \\
+\hline
+{\em completed} & \\
+\hline
+{\em priority} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Database.\+h\end{DoxyCompactItemize}

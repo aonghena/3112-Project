@@ -12,6 +12,10 @@
 
 using namespace std;
 
+/**
+ * UserData
+ * used for turning sql data into User objects
+ */
 struct UserData {
     int id;
     string name;
@@ -19,6 +23,10 @@ struct UserData {
     string password;
 };
 
+/**
+ * TaskData
+ * used for turning sql query data into Task objects
+ */
 struct TaskData {
     int id;
     string title;
@@ -32,8 +40,12 @@ struct TaskData {
 
 class Database {
 private:
+    //// sqlite database object
     sqlite3 *db;
 
+    /**
+     * Creates a user table in the database if not created
+     */
     void createUserTable() {
 
         char *messageError;
@@ -52,6 +64,9 @@ private:
 
     }
 
+    /**
+     * Creates a task table in the database if not created
+     */
     void createTaskTable() {
         char *messageError;
         int exit;
@@ -74,6 +89,10 @@ private:
 
 public:
 
+    /**
+     * Constructor for a Database object
+     * creates and opens the database file if not already created
+     */
     Database() {
         char *messageError;
         int exit = sqlite3_open("todos.db", &db);
@@ -85,6 +104,11 @@ public:
         this->createTaskTable();
     }
 
+    /**
+     * Gets all users from the database
+     * @param qry - a custom qry for the database
+     * @return a vector of UserData objects
+     */
     vector<UserData *> getUserData(string qry = "") {
 
         if (qry == "") qry = "SELECT * FROM User";
@@ -116,6 +140,10 @@ public:
 
     }
 
+    /**
+     * Gets all the tasks in the database
+     * @return a vector of TaskData objects
+     */
     vector<TaskData *> getTaskData() {
 
         string qry = "SELECT * FROM Task";
@@ -149,6 +177,14 @@ public:
 
     }
 
+    /**
+     * Takes user information and creates a user in the database
+     *
+     * @param name
+     * @param email
+     * @param password
+     * @return
+     */
     int createUser(string &name, string &email, string &password) {
         string qry = "INSERT INTO User (name, email, password)"
                      " VALUES(\"" + name + "\",\"" + email + "\",\"" + password + "\");";
@@ -167,6 +203,16 @@ public:
         return last_id;
     }
 
+    /**
+     * Takes task information and creates a task in the database
+     *
+     * @param title
+     * @param description
+     * @param user_id
+     * @param created_at
+     * @param priority
+     * @return The new Task id
+     */
     int createTask(string &title, string &description, int user_id, string created_at, int priority = 0) {
 
         string qry;
@@ -198,6 +244,15 @@ public:
         return last_id;
     }
 
+    /**
+     * Updates a task in the database using a sql query
+     *
+     * @param id of a task
+     * @param title of a task
+     * @param description
+     * @param completed
+     * @param priority
+     */
     void updateTask(int id, string &title, string &description, int completed, int priority = 0) {
 
         cout << "update task" << endl;
@@ -226,13 +281,17 @@ public:
         }
     }
 
+    /**
+     *
+     * Deletes a task from the database using an sql query
+     * @param id of a task
+     */
     void deleteTask(int id) {
 
         cout << "delete task" << endl;
         string qry;
 
         qry = "DELETE FROM Task WHERE id=" + to_string(id) + ";";
-
 
         cout << "qry: " << qry << endl;
 

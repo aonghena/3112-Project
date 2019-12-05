@@ -1,0 +1,241 @@
+\hypertarget{class_user}{}\doxysection{User Class Reference}
+\label{class_user}\index{User@{User}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_a41207863855d5c7bc6307fdf20bdfdbf}{User}} (string name, string email, string password)
+\item 
+\mbox{\hyperlink{class_user_a5bbbae6ad141f07f9b20780a1423d7a5}{User}} (int id, string name, string email, string password)
+\item 
+int \mbox{\hyperlink{class_user_a010077fcd52d32fd3b4e1171f748a86a}{get\+Id}} () const
+\item 
+const string \& \mbox{\hyperlink{class_user_a7f5fd32c6f7fa9e98039687d35a0c48b}{get\+Name}} () const
+\item 
+void \mbox{\hyperlink{class_user_ac44eb16e566dd060399e8f87ceec3fac}{set\+Name}} (const string \&name)
+\item 
+const string \& \mbox{\hyperlink{class_user_a3a019b68d478ee54744b59f7b4bfa021}{get\+Email}} () const
+\item 
+void \mbox{\hyperlink{class_user_a28dfe12cac367428d4045a8bff163db5}{set\+Email}} (const string \&email)
+\item 
+const string \& \mbox{\hyperlink{class_user_ac08fa81ba2e5140d086861abe15d3453}{get\+Password}} () const
+\item 
+void \mbox{\hyperlink{class_user_a00ba1579772decc59ab7f97bc262ce4a}{set\+Password}} (const string \&password)
+\item 
+void \mbox{\hyperlink{class_user_a074bc4533f7880859849ed869eb349a0}{save}} (\mbox{\hyperlink{class_database}{Database}} $\ast$database)
+\item 
+vector$<$ \mbox{\hyperlink{class_task}{Task}} $\ast$ $>$ \mbox{\hyperlink{class_user_aac7decb125ff28cde574d62a4edaae31}{get\+Tasks}} (\mbox{\hyperlink{class_database}{Database}} $\ast$database)
+\item 
+vector$<$ \mbox{\hyperlink{class_urgent_task}{Urgent\+Task}} $\ast$ $>$ \mbox{\hyperlink{class_user_aad6a3db232845bf5b4f62b8999b46991}{get\+U\+Tasks}} (\mbox{\hyperlink{class_database}{Database}} $\ast$database)
+\item 
+void \mbox{\hyperlink{class_user_ab1929fbec852153ce175b457b856a0fe}{create\+Task}} (\mbox{\hyperlink{class_database}{Database}} $\ast$database, string title, string description, int priority=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_user}{User}} $\ast$ $>$ \mbox{\hyperlink{class_user_a170613c8afbe3599e0bc1886d8972cd3}{get\+All}} (\mbox{\hyperlink{class_database}{Database}} $\ast$database)
+\item 
+static \mbox{\hyperlink{class_user}{User}} $\ast$ \mbox{\hyperlink{class_user_aa6a2eaf4ac1eaa46133ef981a86ab44f}{get\+By\+Email\+And\+Password}} (\mbox{\hyperlink{class_database}{Database}} $\ast$database, string email, string password)
+\item 
+\mbox{\Hypertarget{class_user_a8ce93170cd50cb81693f800fe41be519}\label{class_user_a8ce93170cd50cb81693f800fe41be519}} 
+static \mbox{\hyperlink{class_user}{User}} $\ast$ {\bfseries get\+By\+Email} (\mbox{\hyperlink{class_database}{Database}} $\ast$database, string email)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_user_a41207863855d5c7bc6307fdf20bdfdbf}\label{class_user_a41207863855d5c7bc6307fdf20bdfdbf}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{email,  }\item[{string}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{class_user}{User}} Constructor 
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em email} & \\
+\hline
+{\em password} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_user_a5bbbae6ad141f07f9b20780a1423d7a5}\label{class_user_a5bbbae6ad141f07f9b20780a1423d7a5}} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{string}]{name,  }\item[{string}]{email,  }\item[{string}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{class_user}{User}} 
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ \mbox{\hyperlink{class_user}{User}} ID \\
+\hline
+{\em name} & \\
+\hline
+{\em email} & \\
+\hline
+{\em password} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_user_ab1929fbec852153ce175b457b856a0fe}\label{class_user_ab1929fbec852153ce175b457b856a0fe}} 
+\index{User@{User}!createTask@{createTask}}
+\index{createTask@{createTask}!User@{User}}
+\doxysubsubsection{\texorpdfstring{createTask()}{createTask()}}
+{\footnotesize\ttfamily void User\+::create\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_database}{Database}} $\ast$}]{database,  }\item[{string}]{title,  }\item[{string}]{description,  }\item[{int}]{priority = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+create\+Task create task for user 
+\begin{DoxyParams}{Parameters}
+{\em database} & \\
+\hline
+{\em title} & \\
+\hline
+{\em description} & \\
+\hline
+{\em priority} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_user_a170613c8afbe3599e0bc1886d8972cd3}\label{class_user_a170613c8afbe3599e0bc1886d8972cd3}} 
+\index{User@{User}!getAll@{getAll}}
+\index{getAll@{getAll}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getAll()}{getAll()}}
+{\footnotesize\ttfamily static vector$<$\mbox{\hyperlink{class_user}{User}} $\ast$$>$ User\+::get\+All (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_database}{Database}} $\ast$}]{database }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+get\+All get all users 
+\begin{DoxyParams}{Parameters}
+{\em database} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+all users 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_aa6a2eaf4ac1eaa46133ef981a86ab44f}\label{class_user_aa6a2eaf4ac1eaa46133ef981a86ab44f}} 
+\index{User@{User}!getByEmailAndPassword@{getByEmailAndPassword}}
+\index{getByEmailAndPassword@{getByEmailAndPassword}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getByEmailAndPassword()}{getByEmailAndPassword()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_user}{User}}$\ast$ User\+::get\+By\+Email\+And\+Password (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_database}{Database}} $\ast$}]{database,  }\item[{string}]{email,  }\item[{string}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+get\+By\+Email\+And\+Password get user by email and password 
+\begin{DoxyParams}{Parameters}
+{\em database} & \\
+\hline
+{\em email} & \\
+\hline
+{\em password} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_user}{User}} Object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_a3a019b68d478ee54744b59f7b4bfa021}\label{class_user_a3a019b68d478ee54744b59f7b4bfa021}} 
+\index{User@{User}!getEmail@{getEmail}}
+\index{getEmail@{getEmail}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getEmail()}{getEmail()}}
+{\footnotesize\ttfamily const string\& User\+::get\+Email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get\+Email \begin{DoxyReturn}{Returns}
+email 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_a010077fcd52d32fd3b4e1171f748a86a}\label{class_user_a010077fcd52d32fd3b4e1171f748a86a}} 
+\index{User@{User}!getId@{getId}}
+\index{getId@{getId}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int User\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get\+Id \begin{DoxyReturn}{Returns}
+id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_a7f5fd32c6f7fa9e98039687d35a0c48b}\label{class_user_a7f5fd32c6f7fa9e98039687d35a0c48b}} 
+\index{User@{User}!getName@{getName}}
+\index{getName@{getName}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const string\& User\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get\+Name \begin{DoxyReturn}{Returns}
+name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_ac08fa81ba2e5140d086861abe15d3453}\label{class_user_ac08fa81ba2e5140d086861abe15d3453}} 
+\index{User@{User}!getPassword@{getPassword}}
+\index{getPassword@{getPassword}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getPassword()}{getPassword()}}
+{\footnotesize\ttfamily const string\& User\+::get\+Password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get\+Password \begin{DoxyReturn}{Returns}
+password 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_aac7decb125ff28cde574d62a4edaae31}\label{class_user_aac7decb125ff28cde574d62a4edaae31}} 
+\index{User@{User}!getTasks@{getTasks}}
+\index{getTasks@{getTasks}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getTasks()}{getTasks()}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_task}{Task}} $\ast$$>$ User\+::get\+Tasks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_database}{Database}} $\ast$}]{database }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get\+Tasks get \mbox{\hyperlink{class_user}{User}} Tasks 
+\begin{DoxyParams}{Parameters}
+{\em database} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of user tasks 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_aad6a3db232845bf5b4f62b8999b46991}\label{class_user_aad6a3db232845bf5b4f62b8999b46991}} 
+\index{User@{User}!getUTasks@{getUTasks}}
+\index{getUTasks@{getUTasks}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getUTasks()}{getUTasks()}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_urgent_task}{Urgent\+Task}} $\ast$$>$ User\+::get\+U\+Tasks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_database}{Database}} $\ast$}]{database }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get\+U\+Task get users urgent tasks 
+\begin{DoxyParams}{Parameters}
+{\em database} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of user Urgent Tasks 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_user_a074bc4533f7880859849ed869eb349a0}\label{class_user_a074bc4533f7880859849ed869eb349a0}} 
+\index{User@{User}!save@{save}}
+\index{save@{save}!User@{User}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void User\+::save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_database}{Database}} $\ast$}]{database }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+save Saves user to db 
+\begin{DoxyParams}{Parameters}
+{\em database} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_user_a28dfe12cac367428d4045a8bff163db5}\label{class_user_a28dfe12cac367428d4045a8bff163db5}} 
+\index{User@{User}!setEmail@{setEmail}}
+\index{setEmail@{setEmail}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setEmail()}{setEmail()}}
+{\footnotesize\ttfamily void User\+::set\+Email (\begin{DoxyParamCaption}\item[{const string \&}]{email }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set\+Email 
+\begin{DoxyParams}{Parameters}
+{\em email} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_user_ac44eb16e566dd060399e8f87ceec3fac}\label{class_user_ac44eb16e566dd060399e8f87ceec3fac}} 
+\index{User@{User}!setName@{setName}}
+\index{setName@{setName}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void User\+::set\+Name (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set\+Name 
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_user_a00ba1579772decc59ab7f97bc262ce4a}\label{class_user_a00ba1579772decc59ab7f97bc262ce4a}} 
+\index{User@{User}!setPassword@{setPassword}}
+\index{setPassword@{setPassword}!User@{User}}
+\doxysubsubsection{\texorpdfstring{setPassword()}{setPassword()}}
+{\footnotesize\ttfamily void User\+::set\+Password (\begin{DoxyParamCaption}\item[{const string \&}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set\+Password 
+\begin{DoxyParams}{Parameters}
+{\em password} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+User.\+h\end{DoxyCompactItemize}
